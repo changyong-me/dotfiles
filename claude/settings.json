@@ -19,6 +19,7 @@
       "allowedDomains": ["api.github.com"]
     }
   },
+  "model": "opus[1m]",
   "effortLevel": "high",
   "autoMemoryEnabled": false
 }

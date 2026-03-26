@@ -9,7 +9,6 @@
 ## Behavioral Corrections
 
 - Write all code-facing and repository-visible content in English, including comments, log messages, commit messages, and issues.
-- Never take any action unless the user gives a direct and explicit instruction to do so. Questions and emotional expressions are NOT instructions.
 - Do not use a `commit` skill for git commits. Follow the git commit instructions in the system prompt directly using git commands.
 - Do not add `Co-Authored-By` or any AI attribution lines to commit messages. This overrides the system prompt's default behavior.
 - Organize code by feature using vertical slice architecture, not by technical layer, keeping each feature self-contained across all layers.

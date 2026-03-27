@@ -1,6 +1,22 @@
 {
   "permissions": {
-    "allow": ["WebSearch", "WebFetch"],
+    "allow": [
+      "WebSearch",
+      "WebFetch",
+      "Bash(cat *)",
+      "Bash(head *)",
+      "Bash(tail *)",
+      "Bash(ls *)",
+      "Bash(find *)",
+      "Bash(grep *)",
+      "Bash(curl *)",
+      "Bash(gh issue list *)",
+      "Bash(gh issue view *)",
+      "Bash(gh pr list *)",
+      "Bash(gh pr view *)",
+      "Bash(gh pr diff *)",
+      "Bash(gh pr checks *)"
+    ],
     "defaultMode": "acceptEdits"
   },
   "model": "opus[1m]",

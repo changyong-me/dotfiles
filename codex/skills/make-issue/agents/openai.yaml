@@ -1,0 +1,4 @@
+interface:
+  display_name: "Make Issue"
+  short_description: "Turn context into actionable issues"
+  default_prompt: "Use $make-issue to turn this context into clear, actionable issues."

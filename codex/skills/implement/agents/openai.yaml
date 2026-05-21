@@ -1,0 +1,4 @@
+interface:
+  display_name: "Implement"
+  short_description: "Implement issues and PR feedback"
+  default_prompt: "Use $implement to implement this issue or address this PR feedback."

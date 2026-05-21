@@ -30,7 +30,7 @@ Use subagents for the independent exploration tracks. Spawn them with the same m
 Assign each subagent one narrow responsibility:
 
 - **Codebase exploration**: find the relevant modules, data flow, existing patterns, ownership boundaries, tests, fixtures, and likely risk areas for the requested change.
-- **Tools and skills exploration**: identify repository scripts, package manager commands, test/lint/typecheck/build commands, CI configuration, available Codex skills, MCP resources, plugins, issue/PR tooling, and any local helper workflows.
+- **Tools and skills exploration**: identify relevant Codex skills, applicable `SKILL.md` instructions, repository scripts, checks, CI, MCP resources, plugins, issue/PR tooling, and helper workflows.
 
 After spawning subagents, do not perform any other work while they are running. Wait indefinitely until every required subagent has completed, repeating waits as needed instead of reading files, inspecting state, planning, editing, or otherwise advancing the task in the main agent.
 

@@ -4,10 +4,5 @@ model_reasoning_effort = "xhigh"
 notify = ["/Users/changyong/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
 
 [features]
-memories = true
 goals = true
-
-[memories]
-generate_memories = true
-use_memories = true
 

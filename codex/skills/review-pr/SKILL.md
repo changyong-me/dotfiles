@@ -29,7 +29,7 @@ Assign each subagent one narrow responsibility:
 
 Tell each subagent to return only findings that matter for merge readiness. If a subagent notices an issue-level concern while doing its assigned track, it should flag that concern briefly.
 
-While subagents work, handle coordination work that should stay with the main agent: collect PR metadata, check CI and mergeability, read linked issue context, identify repository conventions, and prepare to reconcile findings. Do not duplicate a subagent's assigned review track unless needed to integrate its result.
+After spawning subagents, do not perform any other work while they are running. Wait indefinitely until every required subagent has completed, repeating waits as needed instead of collecting metadata, checking CI, reading issue context, inspecting repository conventions, reconciling findings, or otherwise advancing the review in the main agent.
 
 ### 3. Check Whether the Issue Is the Real Problem
 

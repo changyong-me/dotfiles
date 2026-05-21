@@ -32,7 +32,7 @@ Assign each subagent one narrow responsibility:
 - **Codebase exploration**: find the relevant modules, data flow, existing patterns, ownership boundaries, tests, fixtures, and likely risk areas for the requested change.
 - **Tools and skills exploration**: identify repository scripts, package manager commands, test/lint/typecheck/build commands, CI configuration, available Codex skills, MCP resources, plugins, issue/PR tooling, and any local helper workflows.
 
-While subagents work, handle context that should stay with the main agent: read the source issue or PR feedback, inspect git status and branch state, understand existing uncommitted changes, and note constraints that affect implementation.
+After spawning subagents, do not perform any other work while they are running. Wait indefinitely until every required subagent has completed, repeating waits as needed instead of reading files, inspecting state, planning, editing, or otherwise advancing the task in the main agent.
 
 ### 3. Build a Concrete Implementation Plan
 

@@ -7,25 +7,27 @@ description: Resolve a GitHub issue into a merge-ready pull request. Use when Co
 
 ## Outcome
 
-Set a goal immediately. The goal is complete only when there is a pushed pull request with passing static checks, three independent subagent reviews have covered requirements fit, behavioral risk, and code quality, and the main agent has filtered false positives so that no blocker remains except work that must be handed off to a human.
+The final artifact is a pushed, merge-ready PR, or a PR that becomes merge-ready after clearly stated human handoff work is completed. The PR must include a general comment that summarizes the outcome, verification, review results, and any remaining handoff items.
 
-The final artifact must be either a merge-ready PR or a PR that becomes merge-ready after the stated handoff work is completed. Before completing the goal, leave a general PR comment that summarizes verification, review results, and any remaining handoff items.
+Completion requires passing relevant static checks, three independent subagent reviews covering requirements fit, behavioral risk, and code quality, and main-agent triage that leaves no blocker except explicit human handoff work.
 
 ## Workflow
 
-1. Read the issue, existing PR if present, relevant comments, repository conventions, and changed files. Derive the intended outcome, acceptance criteria, constraints, and likely verification commands.
+1. Set a goal to resolve the referenced issue into a pushed PR that clears the review gate and has no blocker except explicit human handoff work.
 
-2. Implement the issue or address review feedback with the narrowest changes that satisfy the outcome. Preserve unrelated work, match local style, and keep any assumptions visible in the PR when they affect reviewer judgment.
+2. Read the issue, existing PR if present, relevant comments, repository conventions, and changed files. Derive the intended outcome, acceptance criteria, constraints, and likely verification commands.
 
-3. Run the repository's relevant static checks and tests. Fix failures caused by the work, rerun the checks that matter, and record any checks that cannot be executed with the reason.
+3. Implement the issue or address review feedback with the narrowest changes that satisfy the outcome. Preserve unrelated work, match local style, and keep any assumptions visible in the PR when they affect reviewer judgment.
 
-4. Commit the verified changes and push the branch. Open a PR if none exists; otherwise update the existing PR. Ensure the PR body describes the outcome, verification, and any important implementation notes.
+4. Run the repository's relevant static checks and tests. Fix failures caused by the work, rerun the checks that matter, and record any checks that cannot be executed with the reason.
 
-5. Spawn three independent review subagents after the PR is up to date. Ask one to review requirements fit against the issue, one to review behavioral and regression risk, and one to review code quality, maintainability, and test coverage.
+5. Commit the verified changes and push the branch. Open a PR if none exists; otherwise update the existing PR. Ensure the PR body describes the outcome, verification, and any important implementation notes.
 
-6. Triage the subagent reviews yourself. Discard false positives and non-blocking preferences. For each real blocker within agent control, leave a general PR comment summarizing the review finding and intended remediation, make the fix, rerun verification, push the update, and repeat the three-review gate.
+6. Spawn three independent review subagents after the PR is up to date. Ask one to review requirements fit against the issue, one to review behavioral and regression risk, and one to review code quality, maintainability, and test coverage.
 
-7. Complete the goal only after the review gate has no remaining blocker within agent control. If any residual work requires human action, list it clearly in the final PR comment with the current PR status and the exact action needed.
+7. Triage the subagent reviews yourself. Discard false positives and non-blocking preferences. For each real blocker within agent control, leave a general PR comment summarizing the review finding and intended remediation, make the fix, rerun verification, push the update, and repeat the three-review gate.
+
+8. Complete the goal only after the review gate has no remaining blocker within agent control. If any residual work requires human action, list it clearly in the final PR comment with the current PR status and the exact action needed.
 
 ## Review Gate
 

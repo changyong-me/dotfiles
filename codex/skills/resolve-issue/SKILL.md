@@ -23,9 +23,9 @@ Completion requires passing relevant static checks, three independent subagent r
 
 5. Commit the verified changes and push the branch. Open a PR if none exists; otherwise update the existing PR. Ensure the PR body describes the outcome, verification, and any important implementation notes.
 
-6. Spawn three independent review subagents after the PR is up to date. Ask one to review requirements fit against the issue, one to review behavioral and regression risk, and one to review code quality, maintainability, and test coverage.
+6. Spawn three independent review subagents after the PR is up to date. Ask one to review requirements fit against the issue, one to review behavioral and regression risk, and one to review code quality, maintainability, and test coverage. Wait for all three reviews to finish before triaging, commenting, or changing the PR.
 
-7. Triage the subagent reviews yourself. Discard false positives and non-blocking preferences. For each real blocker within agent control, leave a general PR comment summarizing the review finding and intended remediation, make the fix, rerun verification, push the update, and repeat the three-review gate.
+7. Triage the subagent reviews yourself. Discard false positives and non-blocking preferences. If real blockers remain within agent control, leave a general PR comment summarizing the findings and intended remediation, fix them together, rerun verification, push the update, and repeat the three-review gate.
 
 8. Complete the goal only after the review gate has no remaining blocker within agent control. If any residual work requires human action, list it clearly in the final PR comment with the current PR status and the exact action needed.
 

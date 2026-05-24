@@ -17,7 +17,7 @@ Completion requires enough context to choose issue boundaries, state observable 
 
 2. Before choosing issue boundaries, identify whether missing context could materially change the outcome, scope, acceptance criteria, constraints, dependencies, priority, verification, or implementation safety. If so, ask one focused question at a time until the issue can be created as a clear, goal-ready unit of work.
 
-3. Decide whether the work belongs in one issue or several. Prefer one larger issue when the work has one coherent outcome and can be reviewed as a single goal. Split only when the outcomes are independently valuable, can be completed in parallel, carry materially different risks, or need separate ownership.
+3. Decide whether the work belongs in one issue or several. Prefer one larger issue when the work has one coherent outcome and can be reviewed as a single goal. Split only when each resulting issue has independent completion meaning, observable acceptance criteria, and can be reviewed and merged without relying on hidden shared state.
 
 4. Draft the issue body to fit the work. Include the problem context, desired outcome, acceptance criteria, relevant constraints, suggested verification, useful references, dependencies, and known handoff work when those details are available.
 
@@ -25,8 +25,10 @@ Completion requires enough context to choose issue boundaries, state observable 
 
 ## Issue Scope
 
-Size issues for goal execution. A good issue can sustain 24+ hours of continuous agent work when it has a clear outcome, stable constraints, and verifiable completion criteria.
+Size issues around independently complete outcomes, not implementation slices. A good issue can sustain 24+ hours of continuous agent work when it has a clear outcome, stable constraints, and verifiable completion criteria.
 
-Avoid splitting by file, layer, or short-session estimates alone. Split when the resulting issues can be solved and reviewed independently without forcing future agents to coordinate hidden shared state.
+The primary boundary is whether the issue can close with meaningful user, product, or platform value on its own. An enabling platform issue is valid only when it leaves behind a clear contract, behavior, or capability that later work can rely on without reading sibling issues.
 
-Make acceptance criteria observable. Prefer criteria that can be proven by tests, commands, UI behavior, logs, generated artifacts, or a reviewer-visible state change.
+Avoid splitting by file, layer, project, package, module, architectural component, short-session estimate, or expected agent turn count alone. When one observable outcome naturally spans multiple implementation areas, keep it as one issue and describe the internal structure as context, constraints, or implementation guidance.
+
+Split only when the resulting issues are independently valuable, have separate acceptance criteria and verification evidence, can be solved and reviewed independently, or differ materially in risk, ownership, sequencing, or release timing.

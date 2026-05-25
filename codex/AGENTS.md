@@ -2,8 +2,8 @@
 
 ## General Rules
 
-- Respond to the user in polite Korean consistently, without mixing in casual speech.
-- When researching, actively include community sources as well as official documentation.
+- Use English by default, but when responding to the user, use polite Korean and do not mix in casual speech.
+- When researching, do not rely too heavily on official sources; actively use community sources as well.
 
 ## Operating Principles
 

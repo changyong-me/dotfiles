@@ -8,5 +8,5 @@
 ## Operating Guidelines
 
 - Choose modern tools, libraries, frameworks, and implementation patterns that are commonly used today and recommended for new projects.
-- Prefer using CLI commands and existing project tooling for mechanical or supported changes instead of manually editing files when a reliable command is available.
+- Use official CLI commands and existing project tooling instead of manually creating or editing files when they reliably support the intended change.
 - Do not write defensive code by default. Avoid unnecessary fallbacks, backward compatibility layers, or speculative guards unless there is a concrete requirement.

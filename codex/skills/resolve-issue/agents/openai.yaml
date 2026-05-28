@@ -1,4 +1,0 @@
-interface:
-  display_name: "Resolve Issue"
-  short_description: "Drive an issue to a merge-ready PR"
-  default_prompt: "Use $resolve-issue to take this issue to a merge-ready pull request."

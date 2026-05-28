@@ -25,10 +25,8 @@ Completion requires enough context to choose issue boundaries, state observable 
 
 ## Issue Scope
 
-Size issues around independently complete outcomes, not implementation slices. A good issue can sustain 24+ hours of continuous agent work when it has a clear outcome, stable constraints, and verifiable completion criteria.
+Size issues around independently useful capabilities or observable outcomes, not implementation slices. A good issue describes what becomes possible or guaranteed through a public interface or stable contract.
 
-The primary boundary is whether the issue can close with meaningful user, product, or platform value on its own. An enabling platform issue is valid only when it leaves behind a clear contract, behavior, or capability that later work can rely on without reading sibling issues.
+The capability does not have to be end-user facing. It may serve users, operators, developers, API consumers, internal services, automated jobs, or future work that relies on a documented contract.
 
-Avoid splitting by file, layer, project, package, module, architectural component, short-session estimate, or expected agent turn count alone. When one observable outcome naturally spans multiple implementation areas, keep it as one issue and describe the internal structure as context, constraints, or implementation guidance.
-
-Split only when the resulting issues are independently valuable, have separate acceptance criteria and verification evidence, can be solved and reviewed independently, or differ materially in risk, ownership, sequencing, or release timing.
+Keep one observable capability together when it has meaningful user, product, or platform value on its own, even if it spans files, layers, packages, modules, or components. Split only when each resulting issue can be completed, verified, reviewed, and used independently, or differs materially in risk, ownership, sequencing, or release timing.

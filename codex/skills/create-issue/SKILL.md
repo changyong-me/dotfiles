@@ -13,15 +13,15 @@ Completion requires enough context to choose issue boundaries, state observable 
 
 ## Workflow
 
-1. Gather the available context from the user request, repository files, existing issues or PRs, logs, screenshots, and any referenced artifacts. Identify the desired outcome, affected surface area, known constraints, and uncertainty.
+1. Gather the available context from the user request, repository files, existing issues or PRs, logs, screenshots, and referenced artifacts. Identify the desired outcome, affected surface area, known constraints, and uncertainty.
 
-2. Before choosing issue boundaries, identify whether missing context could materially change the outcome, scope, acceptance criteria, constraints, dependencies, priority, verification, or implementation safety. If so, ask one focused question at a time until the issue can be created as a clear, goal-ready unit of work.
+2. Before choosing issue boundaries, decide whether missing context could materially change the outcome, acceptance criteria, sequencing, verification, or implementation safety. Ask one focused question at a time until the issue can be created as a clear, goal-ready unit of work.
 
-3. Decide whether the work belongs in one issue or several. Prefer one larger issue when the work has one coherent outcome and can be reviewed as a single goal. Split only when each resulting issue has independent completion meaning, observable acceptance criteria, and can be reviewed and merged without relying on hidden shared state.
+3. Choose one issue or several based on coherent outcomes. Prefer one larger issue when the work can be reviewed as a single goal, and split only when each issue can be completed, verified, reviewed, and merged independently.
 
-4. Draft the issue body to fit the work. Include the problem context, desired outcome, acceptance criteria, relevant constraints, suggested verification, useful references, dependencies, and known handoff work when those details are available.
+4. Draft the issue body to fit the work. Include the problem context, desired outcome, acceptance criteria, constraints, verification guidance, references, dependencies, and handoff notes when available.
 
-5. Create the GitHub issue or issues. Verify that each issue exists, has the intended title and body, and is linked to any relevant source issue, PR, milestone, label, or project when the context makes that relationship clear.
+5. Create the GitHub issue or issues. Verify that each issue exists with the intended title and body. Link relevant source issues, PRs, milestones, labels, or projects when the context makes that relationship clear.
 
 ## Issue Scope
 

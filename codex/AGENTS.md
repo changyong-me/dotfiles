@@ -7,6 +7,6 @@
 
 ## Operating guidelines
 
-- Only modify files when the user explicitly asks for a change; for criticism, questions, or process discussion, respond first instead of editing.
-- Use official CLI commands and existing project tooling instead of manually creating or editing files when they reliably support the intended change.
 - Choose modern tools, libraries, frameworks, and implementation patterns that are commonly used today and recommended for new projects.
+- Use official CLI commands and existing project tooling instead of manually creating or editing files when they reliably support the intended change.
+- Do not write defensive code. Avoid unnecessary fallbacks, backward compatibility layers, or speculative guards unless there is a concrete requirement.

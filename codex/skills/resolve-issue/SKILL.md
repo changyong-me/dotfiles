@@ -13,9 +13,9 @@ Completion requires passing relevant static checks, three independent subagent r
 
 ## Workflow
 
-1. Read the issue, existing PR if present, relevant comments, repository conventions, and changed files. Derive the intended outcome, acceptance criteria, constraints, and likely verification commands.
+1. Set a goal to resolve the referenced issue into a pushed PR that clears the review gate and has no blocker except explicit human handoff work.
 
-2. Set a goal to resolve the referenced issue into a pushed PR that clears the review gate and has no blocker except explicit human handoff work.
+2. Read the issue, existing PR if present, relevant comments, repository conventions, and changed files. Derive the intended outcome, acceptance criteria, constraints, and likely verification commands.
 
 3. Implement the issue or address review feedback with the narrowest changes that satisfy the outcome. Preserve unrelated work, match local style, and keep any assumptions visible in the PR when they affect reviewer judgment.
 

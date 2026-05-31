@@ -1,6 +1,6 @@
 ---
 name: create-issue
-description: Create GitHub issues from a request, plan, discussion, or repository context by gathering evidence, decomposing only into vertical slices, classifying work as AFK or HITL, showing the proposed issue set for approval, and creating the approved issues with gh or configured GitHub tooling.
+description: Create GitHub issues from a request, plan, discussion, or repository context by gathering evidence, decomposing only into vertical slices, classifying work as AFK or HITL, showing the proposed issue set for approval, and creating the approved issues.
 ---
 
 # Create Issue
@@ -11,18 +11,16 @@ Turn an ambiguous request or planning context into one or more GitHub issues tha
 
 ## Workflow
 
-1. Gather context first: read the user request, linked docs, existing issues, project guidance, and the relevant code or product surface. Identify the target repository, branch expectations, GitHub tooling, constraints, unknowns, and any user decisions that materially change the split.
+1. Gather context from the user request, linked docs, existing issues, project guidance, and the relevant code or product surface. Identify the target repository, branch expectations, constraints, unknowns, and any user decisions that materially change the split.
 
-2. Decompose the work into vertical slices that each produce user-visible or system-verifiable value. Reject horizontal slices such as only schema, only UI, only cleanup, or only tests unless they are fully self-contained deliverables with independent validation.
+2. Decompose the work into vertical slices that produce user-visible or system-verifiable value. Decide whether the result needs one issue, sibling issues, or an epic, and mark each issue AFK or HITL.
 
-3. Decide whether the result needs one issue, several sibling issues, or an epic issue that coordinates child issues. Mark every issue as AFK when an agent can complete it alone, or HITL when product, design, credentials, access, or judgment from a person is required.
+3. Show the proposed issue set to the user before creating anything. Include concise titles, the AFK or HITL label, dependencies, validation expectations, and why each slice is independent; ask for confirmation when the split changes scope or ordering.
 
-4. Show the proposed issue set to the user before creating anything. Include concise titles, the AFK or HITL label, dependencies, validation expectations, and why each slice is independent; ask for confirmation when the split changes scope or ordering.
+4. After the user approves, create the issues, link child issues to the epic when present, preserve issue dependencies where appropriate, and report the created issue URLs.
 
-5. After the user approves, create the issues with the official `gh` CLI or the repository's configured GitHub integration. Link child issues to the epic when present, preserve issue dependencies where appropriate, and report the created issue URLs.
+## Issue Boundaries
 
-## Vertical Slices
+A vertical slice crosses the layers needed for one outcome: interface, API, domain logic, storage, tests, documentation, migration, or operations as needed. Avoid layer-only issues such as schema, UI, cleanup, or tests unless that layer is itself the complete deliverable.
 
-A vertical slice crosses the layers needed for one outcome: interface, API, domain logic, storage, tests, documentation, migration, or operations as needed. It should be small enough for one focused implementation pass yet complete enough to review, validate, and ship independently.
-
-Avoid slices that merely assign layers or specialties to separate issues, because they create hidden dependencies and unfinished work. When a layer-only task seems unavoidable, fold it into the smallest outcome it enables or classify it as HITL if the split requires a human decision.
+Keep each issue small enough for one focused implementation pass and complete enough to validate. Use sibling issues when outcomes can ship separately, or an epic when child issues need coordination. Mark AFK when an agent can finish with context and access; mark HITL when human input is required.

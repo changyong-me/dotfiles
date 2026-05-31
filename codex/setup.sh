@@ -4,5 +4,5 @@ ln -snf ~/.dotfiles/codex/.zprofile ~/.zprofile
 ln -snf ~/.dotfiles/codex/AGENTS.md ~/.codex/AGENTS.md
 
 npx skills add https://github.com/mattpocock/skills \
-  -s diagnose handoff prototype tdd \
+  -s diagnose grill-me handoff prototype tdd \
   -g -a codex -y

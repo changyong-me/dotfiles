@@ -1,0 +1,22 @@
+model = "gpt-5.5"
+model_reasoning_effort = "xhigh"
+
+[desktop]
+preventSleepWhileRunning = true
+appearanceTheme = "dark"
+codeFontSize = 14
+
+[desktop.appearanceDarkChromeTheme]
+accent = "#339cff"
+contrast = 60
+ink = "#ffffff"
+opaqueWindows = false
+surface = "#181818"
+
+[desktop.appearanceDarkChromeTheme.fonts]
+code = '"Hack Nerd Font", D2Coding'
+
+[desktop.appearanceDarkChromeTheme.semanticColors]
+diffAdded = "#40c977"
+diffRemoved = "#fa423e"
+skill = "#ad7bf9"

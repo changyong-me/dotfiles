@@ -9,10 +9,5 @@ source karabiner/setup.sh
 source fish/setup.sh
 source git/setup.sh
 source node/setup.sh
-source claude/setup.sh
 source codex/setup.sh
 source zed/setup.sh
-
-echo ""
-echo "Setup completed successfully!"
-echo "Please restart your computer to ensure all changes take effect."

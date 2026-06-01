@@ -1,8 +1,7 @@
 {
-  "title": "Rules",
   "rules": [
     {
-      "description": "Caps Lock -> Hyper Key",
+      "description": "Map hyper key shortcuts and input source keys",
       "manipulators": [
         {
           "type": "basic",
@@ -16,12 +15,7 @@
             "key_code": "left_shift",
             "modifiers": ["left_command", "left_option", "left_control"]
           }
-        }
-      ]
-    },
-    {
-      "description": "Hyper + HJKL -> Arrow Keys",
-      "manipulators": [
+        },
         {
           "type": "basic",
           "from": {
@@ -89,12 +83,7 @@
           "to": {
             "key_code": "right_arrow"
           }
-        }
-      ]
-    },
-    {
-      "description": "Hyper + YUIO -> Shift + Arrow Keys",
-      "manipulators": [
+        },
         {
           "type": "basic",
           "from": {
@@ -166,12 +155,7 @@
             "key_code": "right_arrow",
             "modifiers": ["left_shift"]
           }
-        }
-      ]
-    },
-    {
-      "description": "Hyper + NM -> Delete Keys",
-      "manipulators": [
+        },
         {
           "type": "basic",
           "from": {
@@ -205,12 +189,7 @@
           "to": {
             "key_code": "delete_forward"
           }
-        }
-      ]
-    },
-    {
-      "description": "Hyper + P -> Escape",
-      "manipulators": [
+        },
         {
           "type": "basic",
           "from": {
@@ -227,12 +206,7 @@
           "to": {
             "key_code": "escape"
           }
-        }
-      ]
-    },
-    {
-      "description": "Hyper + ,. -> Tab Switch",
-      "manipulators": [
+        },
         {
           "type": "basic",
           "from": {
@@ -268,12 +242,7 @@
             "key_code": "tab",
             "modifiers": ["left_control"]
           }
-        }
-      ]
-    },
-    {
-      "description": "Hyper + /; -> Backslash",
-      "manipulators": [
+        },
         {
           "type": "basic",
           "from": {
@@ -308,12 +277,7 @@
             "key_code": "backslash",
             "modifiers": ["left_shift"]
           }
-        }
-      ]
-    },
-    {
-      "description": "Hyper + '[ -> Backtick",
-      "manipulators": [
+        },
         {
           "type": "basic",
           "from": {
@@ -348,12 +312,7 @@
             "key_code": "grave_accent_and_tilde",
             "modifiers": ["left_shift"]
           }
-        }
-      ]
-    },
-    {
-      "description": "Hyper + Arrow -> Window Control",
-      "manipulators": [
+        },
         {
           "type": "basic",
           "from": {
@@ -425,12 +384,7 @@
             "key_code": "right_arrow",
             "modifiers": ["fn", "left_control"]
           }
-        }
-      ]
-    },
-    {
-      "description": "Right Cmd/Opt -> IME/Caps Lock",
-      "manipulators": [
+        },
         {
           "type": "basic",
           "from": {
@@ -444,7 +398,9 @@
               "key_code": "f13",
               "modifiers": ["left_command", "left_option", "left_control"]
             },
-            { "key_code": "vk_none" }
+            {
+              "key_code": "vk_none"
+            }
           ]
         },
         {

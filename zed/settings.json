@@ -4,84 +4,87 @@
 
   // Appearance
   "theme": "One Dark",
-  "buffer_font_size": 14,
   "buffer_font_family": "Hack Nerd Font",
+  "buffer_font_size": 14,
   "buffer_font_fallbacks": ["D2Coding"],
   "ui_font_family": ".SystemUIFont",
 
   // Editor
-  "format_on_save": "off",
-  "soft_wrap": "editor_width",
-  "ensure_final_newline_on_save": false,
-  "autosave": { "after_delay": { "milliseconds": 1000 } },
-  "toolbar": { "quick_actions": false, "breadcrumbs": false },
-
-  // Languages & Tools
-  "languages": {
-    "HTML": { "tab_size": 2 },
-    "CSS": { "tab_size": 2 },
-  },
-  "lsp": {
-    "vtsls": {
-      "settings": {
-        "typescript": {
-          "updateImportsOnFileMove": { "enabled": "always" },
-        },
-        "javascript": {
-          "updateImportsOnFileMove": { "enabled": "always" },
-        },
-      },
-      "enable_lsp_tasks": true,
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000,
     },
   },
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false,
+  },
+  "soft_wrap": "editor_width",
+  "format_on_save": "off",
+  "remove_trailing_whitespace_on_save": false,
+  "ensure_final_newline_on_save": false,
 
   // Window & Layout
+  "status_bar": {
+    "active_encoding_button": "enabled",
+  },
   "tab_bar": {
     "show_nav_history_buttons": false,
     "show_tab_bar_buttons": false,
   },
-  "title_bar": { "show_user_picture": false },
-  "tabs": { "file_icons": true },
-  "diagnostics": { "button": false },
-  "debugger": { "button": false },
-  "status_bar": { "active_encoding_button": "enabled" },
+  "diagnostics": {
+    "button": false,
+  },
+  "debugger": {
+    "button": false,
+  },
+  "title_bar": {
+    "show_user_picture": false,
+  },
+  "tabs": {
+    "file_icons": true,
+  },
 
   // Panels
-  "project_panel": { "dock": "left", "default_width": 360 },
-  "git_panel": { "dock": "left", "default_width": 360 },
-  "outline_panel": { "button": false },
-  "collaboration_panel": { "button": false },
+  "project_panel": {
+    "dock": "left",
+    "default_width": 360,
+  },
+  "outline_panel": {
+    "button": false,
+  },
+  "git_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "button": false,
+  },
 
   // Terminal
   "terminal": {
     "button": false,
-    "blinking": "on",
+    "shell": {
+      "program": "fish",
+    },
     "cursor_shape": "bar",
-    "option_as_meta": true,
+    "blinking": "on",
     "default_height": 640,
-    "shell": { "program": "fish" },
   },
 
   // Version Control
-  "git": { "inline_blame": { "enabled": false } },
+  "git": {
+    "inline_blame": {
+      "enabled": false,
+    },
+  },
 
   // AI
   "disable_ai": true,
 
-  // Extensions
-  "auto_install_extensions": {
-    "html": true,
-    "toml": true,
-    "git-firefly": true,
-    "dockerfile": true,
-    "astro": true,
-    "fish": true,
-  },
-
   // Theme
   "theme_overrides": {
     "One Dark": {
-      // Background colors
+      // Background
       "background": "#1d2027ff",
       "panel.background": "#1d2027ff",
       "tab_bar.background": "#1d2027ff",
@@ -92,7 +95,7 @@
       "elevated_surface.background": "#1d2027ff",
       "surface.background": "#1d2027ff",
 
-      // Element colors
+      // Element
       "element.hover": "#282c33ff",
       "element.active": "#33383fff",
       "element.selected": "#33383fff",

@@ -15,7 +15,7 @@ Review a GitHub PR from two complementary angles: whether the code follows the p
 
 2. Spawn two subagents in parallel and wait for both results. Assign one to standards review and one to spec review; give each the PR reference and linked issue or spec material, and require it to inspect relevant guidance and code independently.
 
-3. Present both reviews to the user after both subagents finish. Lead with actionable findings ordered by severity and grounded in file or line references, then include open questions, residual risks, and a brief note when either perspective found no issues.
+3. Present both reviews to the user after both subagents finish. Keep the standards review and spec review separate; within each review, preserve the subagent's findings as reported, including severity, file or line references, open questions, and residual risks.
 
 ## Review Perspectives
 

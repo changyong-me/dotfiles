@@ -1,9 +1,9 @@
 ---
-name: resolve-issue
+name: resolve-issues
 description: Resolve AFK GitHub issues by inspecting issue intent, processing each issue sequentially through a dedicated subagent, requiring each subagent to use relevant skills, validate, and commit, then opening or updating a PR that closes the issues when merged.
 ---
 
-# Resolve Issue
+# Resolve Issues
 
 ## Overview
 

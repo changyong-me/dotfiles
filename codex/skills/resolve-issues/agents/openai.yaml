@@ -1,0 +1,7 @@
+interface:
+  display_name: "Resolve Issues"
+  short_description: "Resolve agent-ready GitHub issues"
+  default_prompt: "Use $resolve-issues to resolve these agent-ready GitHub issues and open a PR."
+
+policy:
+  allow_implicit_invocation: false

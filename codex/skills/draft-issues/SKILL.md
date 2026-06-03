@@ -1,9 +1,9 @@
 ---
-name: create-issue
-description: Create GitHub issues from a request, plan, discussion, or repository context by gathering evidence, decomposing only into vertical slices, classifying work as AFK or HITL, showing the proposed issue set for approval, and creating the approved issues.
+name: draft-issues
+description: Draft GitHub issues from a request, plan, discussion, or repository context by gathering evidence, decomposing only into vertical slices, classifying work as AFK or HITL, showing the proposed issue set for approval, and creating the approved issues.
 ---
 
-# Create Issue
+# Draft Issues
 
 ## Overview
 

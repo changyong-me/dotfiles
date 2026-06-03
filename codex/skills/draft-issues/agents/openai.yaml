@@ -1,0 +1,7 @@
+interface:
+  display_name: "Draft Issues"
+  short_description: "Turn context into GitHub issues"
+  default_prompt: "Use $draft-issues to turn this context into vertical-slice GitHub issues."
+
+policy:
+  allow_implicit_invocation: false

@@ -8,4 +8,4 @@ description: Draft vertical-slice issues and create them after approval.
 3. Show the draft issues to the user and ask for approval.
 4. After the user approves, create the issues and report their URLs.
 
-Each issue should be an independently valuable and verifiable vertical slice, not a horizontal slice of one layer. Mark it agent-ready when it can be completed without human decisions; otherwise mark it human-in-the-loop.
+Each issue should be an independently valuable and verifiable vertical slice that cuts through the integration layers end-to-end, not a horizontal slice of one layer. Mark it agent-ready when it can be completed without human decisions; otherwise mark it human-in-the-loop.

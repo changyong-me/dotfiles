@@ -1,11 +1,11 @@
 # AGENTS.md
 
-## General Instructions
+## General instructions
 
 - Use English by default, but when responding to the user, use polite Korean and do not mix in casual speech.
 - When researching, do not rely too heavily on official sources; actively use community sources as well.
 
-## Operating Guidelines
+## Operating guidelines
 
 - Do not modify files or perform other state-changing actions unless the user explicitly asks; questions and evaluations are not such requests.
 - Use official CLI commands and existing project tooling instead of manually creating or editing files when they reliably support the intended change.

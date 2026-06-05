@@ -8,4 +8,6 @@ description: Resolve agent-ready issues and open or update a PR.
 3. For each issue, spawn a subagent, just wait for it to finish, then move to the next issue.
 4. After all subagents finish, open or update a PR that closes the issues when merged.
 
-Subagents should not receive parent conversation history. They should inspect the issue, list available skills, read their descriptions, and use all applicable skills; then plan the fix, implement it, validate it, commit the changes, and report the result.
+Do not pass parent conversation history or parent instructions to subagents. For context that subagents can fetch or inspect themselves, pass references instead of copying it into the prompt.
+
+Subagents should inspect the issue, list available skills, read their descriptions, and use all applicable skills; then plan the fix, implement it, validate it, commit the changes, and report the result.

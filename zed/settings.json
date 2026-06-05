@@ -15,6 +15,7 @@
       "milliseconds": 1000,
     },
   },
+  "diff_view_style": "unified",
   "toolbar": {
     "breadcrumbs": false,
     "quick_actions": false,

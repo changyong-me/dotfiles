@@ -3,12 +3,11 @@ name: tdd
 description: Implement using behavior-focused red-green-refactor cycles. Use when working on behavior changes, bug fixes, regressions, or non-trivial logic.
 ---
 
-1. Understand the request from the conversation history and explore the codebase as needed.
-2. Identify observable behaviors to test and keep the list flexible.
-3. Write one test for the selected behavior and run it to confirm it fails.
-4. Implement only enough code to pass that test and run it to confirm it passes.
-5. For each remaining behavior, repeat steps 3 and 4.
-6. After the selected behaviors pass, refactor while keeping tests green.
+1. Identify and prioritize observable behaviors to test while keeping the list flexible.
+2. Write one test for the selected behavior and run it to confirm it fails.
+3. Implement only enough code to pass that test and run it to confirm it passes.
+4. For each remaining behavior, repeat steps 2 and 3.
+5. After the selected behaviors pass, refactor while keeping tests green.
 
 Good tests describe what the system does, not how it does it. They exercise public interfaces, use real code paths when practical, and survive internal refactors that preserve behavior.
 

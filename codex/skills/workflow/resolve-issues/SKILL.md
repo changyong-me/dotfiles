@@ -10,4 +10,4 @@ description: Resolve agent-ready issues and open or update a PR.
 
 Do not pass parent conversation history or parent instructions to subagents. For context that subagents can fetch or inspect themselves, pass references instead of copying it into the prompt.
 
-Subagents should inspect the issue, list available skills, read their descriptions, and use all applicable skills; then plan the fix, implement it, validate it, commit the changes, and report the result.
+Subagents should inspect the issue and use any applicable skills; then plan the fix, implement it, validate it, commit the changes, and report the result.

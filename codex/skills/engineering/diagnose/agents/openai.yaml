@@ -1,0 +1,4 @@
+interface:
+  display_name: "Diagnose"
+  short_description: "Diagnose a bug with a disciplined feedback loop"
+  default_prompt: "Use $diagnose to diagnose a bug with a disciplined feedback loop."

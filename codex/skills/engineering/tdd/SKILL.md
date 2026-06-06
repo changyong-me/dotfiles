@@ -15,6 +15,6 @@ Bad tests couple to implementation details. Avoid testing private methods, inter
 
 Mock only system boundaries such as external APIs, time, randomness, file systems, and sometimes databases. Do not mock internal collaborators you control.
 
-Vertical slices test independently valuable behavior through the relevant layers. Avoid horizontal slices, imagined implementation, and speculative future features.
+Vertical slices use tracer bullets: one test, one implementation, then repeat. Avoid horizontal slices that write all tests before all implementation.
 
 Refactor candidates include duplication, long methods, shallow modules, misplaced logic, primitive obsession, and existing code the new behavior exposes as problematic.

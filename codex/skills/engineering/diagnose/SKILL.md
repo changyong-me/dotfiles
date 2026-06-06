@@ -12,13 +12,15 @@ description: Diagnose a bug with a disciplined feedback loop. Use when debugging
 
 Feedback loops are the work. Turn uncertainty into the fastest runnable signal that reaches the failure; bisection, hypothesis testing, and instrumentation all depend on that signal.
 
-Signal quality decides diagnosis quality. Refine the loop until it matches the exact symptom, fails for the original scenario, runs repeatedly, and is stable enough to guide decisions.
+Runnable seams make feedback loops concrete. Prefer the nearest executable seam, roughly from tests and request or CLI scripts through browser automation, trace replay, harnesses, fuzzing, bisection, and differential checks.
+
+Signal quality decides diagnosis quality. Trust a loop only when it is fast, sharp, repeatable, stable enough to guide decisions, and failing for the original scenario with the user's exact symptom rather than a nearby crash or generic failure.
 
 Flakiness is a reproduction-rate problem. Keep increasing the frequency and observability of the failure until it is frequent enough to compare hypotheses against.
 
-Hypotheses are predictions. Rank 3-5 theories before testing, and keep only theories that say what would change if they were true.
+Hypotheses are predictions. Each theory should name what evidence would strengthen it, what evidence would weaken it, and which probe will test that difference.
 
-Instrumentation should discriminate. Choose the smallest probe that separates competing hypotheses, and measure performance regressions before changing code.
+Instrumentation should discriminate. Change one variable at a time, choose the smallest probe that separates competing hypotheses, keep temporary probes easy to identify and remove, and measure performance regressions before changing code.
 
 Regression tests encode the real failure. Write them before the fix when a correct seam exercises the call-site behavior; if no correct seam exists, document that as architectural information instead of writing a misleading test.
 

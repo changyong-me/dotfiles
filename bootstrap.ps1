@@ -44,7 +44,7 @@ function Bootstrap {
 
   Link-Config "$Dotfiles\codex\AGENTS.md"          "$env:USERPROFILE\.codex\AGENTS.md"
   Copy-Config "$Dotfiles\codex\config.toml"        "$env:USERPROFILE\.codex\config.toml"
-  Link-Config "$Dotfiles\codex\skills"             "$env:USERPROFILE\.codex\skills"
+  Link-Config "$Dotfiles\codex\skills"             "$env:USERPROFILE\.codex\skills\user"
   Link-Config "$Dotfiles\equalizer-apo\config.txt" "$env:ProgramFiles\EqualizerAPO\config\config.txt"
   Link-Config "$Dotfiles\git\.gitconfig"           "$env:USERPROFILE\.gitconfig"
   Link-Config "$Dotfiles\git\ignore"               "$env:USERPROFILE\.config\git\ignore"

@@ -1,11 +1,12 @@
 $ErrorActionPreference = "Stop"
 
-function Install-App($Id) {
-  winget install --id $Id -e --accept-source-agreements --accept-package-agreements
+function Install-App($Id, $Location) {
+  $extra = if ($Location) { @("--location", $Location) } else { @() }
+  winget install --id $Id -e --accept-source-agreements --accept-package-agreements @extra
 }
 
 Install-App AdGuard.AdGuard
-Install-App Blizzard.BattleNet
+Install-App Blizzard.BattleNet "${env:ProgramFiles(x86)}\Battle.net"
 Install-App Discord.Discord
 Install-App Google.Chrome
 Install-App Microsoft.PowerShell

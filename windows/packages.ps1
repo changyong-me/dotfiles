@@ -24,7 +24,5 @@ if (-not (Get-Command scoop -ErrorAction SilentlyContinue)) {
 }
 
 scoop bucket add nerd-fonts
-scoop bucket add nonportable
 scoop install nerd-fonts/Hack-NF 
 scoop install nerd-fonts/D2Coding-NF
-scoop install nonportable/equalizer-apo-np

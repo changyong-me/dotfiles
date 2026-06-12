@@ -56,17 +56,17 @@ bootstrap() {
     sudo chsh -s "$FISH" "$USER"
   fi
 
-  link  "$DOTFILES/codex/AGENTS.md"               "$HOME/.codex/AGENTS.md"
-  copy  "$DOTFILES/codex/config.toml"             "$HOME/.codex/config.toml"
-  link  "$DOTFILES/codex/skills"                  "$HOME/.codex/skills/user"
-  link  "$DOTFILES/git/.gitconfig"                "$HOME/.gitconfig"
-  link  "$DOTFILES/git/ignore"                    "$HOME/.config/git/ignore"
-  link  "$DOTFILES/karabiner-elements/rules.json" "$HOME/.config/karabiner/assets/complex_modifications/rules.json"
-  link  "$DOTFILES/shell/.zprofile"               "$HOME/.zprofile"
-  link  "$DOTFILES/shell/config.fish"             "$HOME/.config/fish/config.fish"
-  link  "$DOTFILES/shell/starship.toml"           "$HOME/.config/starship.toml"
-  link  "$DOTFILES/zed/keymap.json"               "$HOME/.config/zed/keymap.json"
-  link  "$DOTFILES/zed/settings.json"             "$HOME/.config/zed/settings.json"
+  link  "$DOTFILES/codex/AGENTS.md"      "$HOME/.codex/AGENTS.md"
+  copy  "$DOTFILES/codex/config.toml"    "$HOME/.codex/config.toml"
+  link  "$DOTFILES/codex/skills"         "$HOME/.codex/skills/user"
+  link  "$DOTFILES/git/.gitconfig"       "$HOME/.gitconfig"
+  link  "$DOTFILES/git/ignore"           "$HOME/.config/git/ignore"
+  link  "$DOTFILES/karabiner/rules.json" "$HOME/.config/karabiner/assets/complex_modifications/rules.json"
+  link  "$DOTFILES/shell/.zprofile"      "$HOME/.zprofile"
+  link  "$DOTFILES/shell/config.fish"    "$HOME/.config/fish/config.fish"
+  link  "$DOTFILES/shell/starship.toml"  "$HOME/.config/starship.toml"
+  link  "$DOTFILES/zed/keymap.json"      "$HOME/.config/zed/keymap.json"
+  link  "$DOTFILES/zed/settings.json"    "$HOME/.config/zed/settings.json"
   touch "$HOME/.hushlogin"
 
   echo

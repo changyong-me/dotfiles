@@ -40,6 +40,7 @@ bootstrap() {
   copy "$DOTFILES/codex/config.toml"    "$HOME/.codex/config.toml"
   link "$DOTFILES/codex/skills"         "$HOME/.codex/skills"
   link "$DOTFILES/git/.gitconfig"       "$HOME/.gitconfig"
+  link "$DOTFILES/git/ignore"           "$HOME/.config/git/ignore"
   link "$DOTFILES/karabiner/rules.json" "$HOME/.config/karabiner/assets/complex_modifications/rules.json"
   link "$DOTFILES/shell/.zprofile"      "$HOME/.zprofile"
   link "$DOTFILES/shell/config.fish"    "$HOME/.config/fish/config.fish"
@@ -53,6 +54,9 @@ bootstrap() {
   require fnm
   fnm install --lts
   fnm default lts-latest
+
+  require rustup
+  rustup default stable
 
   source "$DOTFILES/macos/defaults.sh"
 

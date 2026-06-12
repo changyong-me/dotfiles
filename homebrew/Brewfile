@@ -16,4 +16,3 @@ cask "orbstack"
 cask "thaw"
 cask "zed"
 mas "Proton Pass for Safari", id: 6502835663
-cargo "wasm-pack"

@@ -37,6 +37,7 @@ function Bootstrap {
   Copy-Config "$Dotfiles\codex\config.toml" "$env:USERPROFILE\.codex\config.toml"
   Link-Config "$Dotfiles\codex\skills"      "$env:USERPROFILE\.codex\skills"
   Link-Config "$Dotfiles\git\.gitconfig"    "$env:USERPROFILE\.gitconfig"
+  Link-Config "$Dotfiles\git\ignore"        "$env:USERPROFILE\.config\git\ignore"
 
   reg import "$Dotfiles\windows\keymap.reg"
 

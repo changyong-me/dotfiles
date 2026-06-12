@@ -4,7 +4,6 @@
 
 [core]
     pager = less -+X -FR
-    autocrlf = input
 
 [fetch]
     prune = true

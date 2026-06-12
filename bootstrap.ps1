@@ -1,6 +1,7 @@
 $ErrorActionPreference = "Stop"
 $Dotfiles = "$env:USERPROFILE\.dotfiles"
 $DotfilesRepo = "https://github.com/changyong-me/dotfiles.git"
+$Principal = [Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()
 $Documents = [Environment]::GetFolderPath("MyDocuments")
 
 function Link-Config($Target, $Path) {
@@ -15,13 +16,16 @@ function Copy-Config($Source, $Path) {
 }
 
 function Bootstrap {
-  $principal = [Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()
-  if (-not $principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+  if (-not $Principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
     throw "Run from an administrator PowerShell."
   }
 
   if (-not $PSCommandPath) {
     if (-not (Get-Command git -ErrorAction SilentlyContinue)) {
+      Install-PackageProvider -Name NuGet -Force | Out-Null
+      Install-Module -Name Microsoft.WinGet.Client -Force -Repository PSGallery | Out-Null
+      Repair-WinGetPackageManager -Force -Latest
+
       winget install --id Git.Git -e --accept-source-agreements --accept-package-agreements
       $env:Path = [Environment]::GetEnvironmentVariable("Path", "Machine") + ";" +
                   [Environment]::GetEnvironmentVariable("Path", "User")
@@ -35,6 +39,7 @@ function Bootstrap {
   }
 
   reg import "$Dotfiles\windows\registry.reg"
+  Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Force
   & "$Dotfiles\windows\packages.ps1"
 
   Link-Config "$Dotfiles\codex\AGENTS.md"          "$env:USERPROFILE\.codex\AGENTS.md"

@@ -22,19 +22,16 @@ require() {
 }
 
 bootstrap() {
-  if [ ! -f "${BASH_SOURCE[0]:-}" ]; then
-    if ! command -v brew >/dev/null 2>&1; then
-      NONINTERACTIVE=1 /bin/bash -c \
-        "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    fi
-
+  if ! command -v brew >/dev/null 2>&1; then
+    NONINTERACTIVE=1 /bin/bash -c \
+      "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     eval "$(/opt/homebrew/bin/brew shellenv)"
+  fi
 
-    if [ -d "$DOTFILES/.git" ]; then
-      git -C "$DOTFILES" pull --ff-only
-    else
-      git clone "$DOTFILES_REPO" "$DOTFILES"
-    fi
+  if [ -d "$DOTFILES/.git" ]; then
+    git -C "$DOTFILES" pull --ff-only
+  else
+    git clone "$DOTFILES_REPO" "$DOTFILES"
   fi
 
   bash "$DOTFILES/macos/defaults.sh"

@@ -1,23 +1,26 @@
 Windows Registry Editor Version 5.00
 
-; Remap keys
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
 "Scancode Map"=hex:00,00,00,00,00,00,00,00,04,00,00,00,1d,00,3a,00,3a,00,1d,e0,53,e0,1d,00,00,00,00,00
 
-; Disable fast startup
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power]
 "HiberbootEnabled"=dword:00000000
 
-; Hide quick access items
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer]
 "ShowRecent"=dword:00000000
 "ShowFrequent"=dword:00000000
 "ShowCloudFilesInQuickAccess"=dword:00000000
 
-; Show file name extensions
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"LaunchTo"=dword:00000001
 "HideFileExt"=dword:00000000
+"TaskbarAl"=dword:00000000
+"TaskbarDa"=dword:00000000
+"TaskbarMn"=dword:00000000
+"ShowTaskViewButton"=dword:00000000
 
-; Disable sticky keys
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search]
+"SearchboxTaskbarMode"=dword:00000000
+
 [HKEY_CURRENT_USER\Control Panel\Accessibility\StickyKeys]
 "Flags"="506"

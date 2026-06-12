@@ -1,13 +1,64 @@
 #!/bin/bash
-
 set -euo pipefail
-cd "$(dirname "$0")"
 
-source macos/setup.sh
-source homebrew/setup.sh
-source karabiner/setup.sh
-source shell/setup.sh
-source git/setup.sh
-source node/setup.sh
-source codex/setup.sh
-source zed/setup.sh
+DOTFILES="$HOME/.dotfiles"
+DOTFILES_REPO="https://github.com/changyong-me/dotfiles.git"
+
+link() {
+  mkdir -p "$(dirname "$2")"
+  ln -sfn "$1" "$2"
+}
+
+copy() {
+  mkdir -p "$(dirname "$2")"
+  cp "$1" "$2"
+}
+
+require() {
+  command -v "$1" >/dev/null 2>&1 && return
+  echo "$1: command not found" >&2
+  exit 1
+}
+
+bootstrap() {
+  if [ ! -f "${BASH_SOURCE[0]:-}" ]; then
+    if ! command -v brew >/dev/null 2>&1; then
+      NONINTERACTIVE=1 /bin/bash -c \
+        "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    fi
+
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+
+    if [ -d "$DOTFILES/.git" ]; then
+      git -C "$DOTFILES" pull --ff-only
+    else
+      git clone "$DOTFILES_REPO" "$DOTFILES"
+    fi
+  fi
+
+  link "$DOTFILES/codex/AGENTS.md"      "$HOME/.codex/AGENTS.md"
+  copy "$DOTFILES/codex/config.toml"    "$HOME/.codex/config.toml"
+  link "$DOTFILES/codex/skills"         "$HOME/.codex/skills"
+  link "$DOTFILES/git/.gitconfig"       "$HOME/.gitconfig"
+  link "$DOTFILES/karabiner/rules.json" "$HOME/.config/karabiner/assets/complex_modifications/rules.json"
+  link "$DOTFILES/shell/.zprofile"      "$HOME/.zprofile"
+  link "$DOTFILES/shell/config.fish"    "$HOME/.config/fish/config.fish"
+  link "$DOTFILES/shell/starship.toml"  "$HOME/.config/starship.toml"
+  link "$DOTFILES/zed/keymap.json"      "$HOME/.config/zed/keymap.json"
+  link "$DOTFILES/zed/settings.json"    "$HOME/.config/zed/settings.json"
+
+  require brew
+  brew bundle --file="$DOTFILES/homebrew/Brewfile"
+
+  require fnm
+  fnm install --lts
+  fnm default lts-latest
+
+  source "$DOTFILES/macos/defaults.sh"
+
+  echo
+  echo "Bootstrap completed successfully!"
+  echo "Please restart your computer to apply all settings."
+}
+
+bootstrap "$@"

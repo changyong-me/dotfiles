@@ -64,9 +64,6 @@
   // Terminal
   "terminal": {
     "button": false,
-    "shell": {
-      "program": "fish",
-    },
     "cursor_shape": "bar",
     "blinking": "on",
     "default_height": 640,

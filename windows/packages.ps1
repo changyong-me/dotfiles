@@ -20,6 +20,8 @@ function Install-WinGetPackage($Id, $Location) {
 }
 
 Add-ScoopBucket nerd-fonts
+Install-ScoopPackage gh
+Install-ScoopPackage git
 Install-ScoopPackage nerd-fonts/D2Coding-NF
 Install-ScoopPackage nerd-fonts/Hack-NF
 Install-ScoopPackage pwsh

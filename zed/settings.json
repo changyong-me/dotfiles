@@ -6,7 +6,7 @@
   "theme": "One Dark",
   "buffer_font_family": "Hack Nerd Font",
   "buffer_font_size": 14,
-  "buffer_font_fallbacks": ["D2Coding"],
+  "buffer_font_fallbacks": ["D2CodingLigature Nerd Font"],
   "ui_font_family": ".SystemUIFont",
 
   // Editor

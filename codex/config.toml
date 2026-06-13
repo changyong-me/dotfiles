@@ -14,7 +14,7 @@ opaqueWindows = false
 surface = "#181818"
 
 [desktop.appearanceDarkChromeTheme.fonts]
-code = '"Hack Nerd Font", D2Coding'
+code = '"Hack Nerd Font", "D2CodingLigature Nerd Font"'
 
 [desktop.appearanceDarkChromeTheme.semanticColors]
 diffAdded = "#40c977"

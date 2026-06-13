@@ -1,44 +1,33 @@
 [
-  // Format codes
   {
     "context": "Editor",
     "bindings": {
       "ctrl-alt-cmd-shift-f": "editor::Format",
     },
   },
-
-  // Rename symbols
   {
     "context": "Editor",
     "bindings": {
       "ctrl-alt-cmd-shift-r": "editor::Rename",
     },
   },
-
-  // Show completions
   {
     "context": "Editor",
     "bindings": {
       "ctrl-alt-cmd-shift-c": "editor::ShowCompletions",
     },
   },
-
-  // Git history
   {
     "bindings": {
       "ctrl-alt-cmd-shift-g": "git::FileHistory",
     },
   },
-
-  // Git blame
   {
     "context": "Editor",
     "bindings": {
       "ctrl-alt-cmd-shift-b": "git::Blame",
     },
   },
-
-  // Switch tabs
   {
     "context": "Pane",
     "bindings": {

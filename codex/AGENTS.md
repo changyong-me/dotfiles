@@ -6,7 +6,7 @@
 - Write development-related content in English, including code, docs, commit messages, and issues.
 - When researching, do not rely too heavily on official sources; actively use community sources as well.
 
-## Operating guidelines
+## Operating instructions
 
 - Do not modify files or perform other state-changing actions unless the user explicitly asks; questions and evaluations are not such requests.
 - Use official CLI commands and existing project tooling instead of manually creating or editing files when they reliably support the intended change.

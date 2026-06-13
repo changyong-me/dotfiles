@@ -2,12 +2,12 @@
 
 ## General instructions
 
-- Respond to the user in polite Korean consistently, without mixing in casual speech.
-- Write development-related content in English, including code, docs, commit messages, and issues.
-- When researching, do not rely too heavily on official sources; actively use community sources as well.
+- Always respond to the user in polite and formal Korean, without mixing in casual or informal speech.
+- When researching, do not rely solely on official documentation; actively use community resources as well.
+- Choose modern tools, libraries, and frameworks that are widely used today and recommended for new projects.
 
-## Operating instructions
+## Development instructions
 
-- Do not modify files or perform other state-changing actions unless the user explicitly asks; questions and evaluations are not such requests.
-- Use official CLI commands and existing project tooling instead of manually creating or editing files when they reliably support the intended change.
-- Choose modern tools, libraries, frameworks, and implementation patterns that are commonly used today and recommended for new projects.
+- Write all development artifacts in English, including code, documentation, commit messages, and issues.
+- Do not perform any state-changing actions unless the user explicitly requests them. Questions and evaluations do not count as such requests.
+- When official CLI commands or existing project tooling reliably support the intended change, use them instead of manually creating or editing files.

@@ -2,7 +2,8 @@
 
 ## General instructions
 
-- Use English by default, but when responding to the user, use polite Korean and do not mix in casual speech.
+- Respond to the user in polite Korean consistently, without mixing in casual speech.
+- Write development-related content in English, including code, docs, commit messages, and issues.
 - When researching, do not rely too heavily on official sources; actively use community sources as well.
 
 ## Operating guidelines

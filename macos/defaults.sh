@@ -13,8 +13,6 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
-defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
-defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
 # Desktop preferences
 defaults write com.apple.finder _FXSortFoldersFirstOnDesktop -bool true
@@ -28,6 +26,3 @@ defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
 
 # Mission control preferences
 defaults write com.apple.dock mru-spaces -bool false
-
-# Miscellaneous
-defaults write com.apple.LaunchServices LSQuarantine -bool false

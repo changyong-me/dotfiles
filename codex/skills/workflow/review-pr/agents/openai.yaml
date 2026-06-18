@@ -1,7 +1,0 @@
-interface:
-  display_name: "Review PR"
-  short_description: "Review a PR from two independent perspectives"
-  default_prompt: "Use $review-pr to review a PR from two independent perspectives."
-
-policy:
-  allow_implicit_invocation: false

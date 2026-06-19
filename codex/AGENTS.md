@@ -11,4 +11,5 @@
 
 - Write all development artifacts and repository-visible content in English, including code, comments, documentation, commit messages, issues, and PRs.
 - Do not perform any state-changing actions unless explicitly requested. Questions and criticisms do not count as such requests; respond with an explanation instead.
+- Do not write defensive code. Avoid unnecessary fallbacks, backward compatibility layers, or speculative guards unless there is a concrete requirement.
 - When official CLI commands or existing project tooling reliably support the intended change, use them instead of manually creating or editing files.

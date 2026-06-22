@@ -4,7 +4,7 @@
 
 - Always respond to the user in polite and formal Korean, without mixing in casual or informal speech.
 - When aligning on a decision, discuss one point at a time and wait for the user before moving to the next.
-- When researching, do not rely solely on official documentation; use community resources as well.
+- When researching, do not rely too heavily on official documentation; use community resources as well.
 - Choose modern tools, libraries, and frameworks that are widely used and recommended for new projects.
 
 ## Development instructions

@@ -1,5 +1,5 @@
 ---
-name: draft-issues
+name: create-issues
 description: Draft vertical-slice issues and create them after approval.
 ---
 

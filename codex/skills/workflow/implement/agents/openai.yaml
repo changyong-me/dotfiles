@@ -1,7 +1,0 @@
-interface:
-  display_name: "Implement"
-  short_description: "Resolve an issue or address a PR review comment, then review the PR"
-  default_prompt: "Use $implement to resolve an issue or address a PR review comment, then review the PR."
-
-policy:
-  allow_implicit_invocation: false

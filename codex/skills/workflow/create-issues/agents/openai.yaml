@@ -1,7 +1,7 @@
 interface:
-  display_name: "Draft Issues"
+  display_name: "Create Issues"
   short_description: "Draft vertical-slice issues and create them after approval"
-  default_prompt: "Use $draft-issues to draft vertical-slice issues and create them after approval."
+  default_prompt: "Use $create-issues to draft vertical-slice issues and create them after approval."
 
 policy:
   allow_implicit_invocation: false

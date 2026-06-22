@@ -1,0 +1,7 @@
+interface:
+  display_name: "Resolve Issue"
+  short_description: "Resolve an agent-ready issue end-to-end and deliver a PR"
+  default_prompt: "Use $resolve-issue to resolve an agent-ready issue end-to-end and deliver a PR."
+
+policy:
+  allow_implicit_invocation: false

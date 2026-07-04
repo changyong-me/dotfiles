@@ -3,7 +3,6 @@ set -euo pipefail
 
 DOTFILES="$HOME/.dotfiles"
 DOTFILES_REPO="https://github.com/changyong-me/dotfiles.git"
-FISH="/opt/homebrew/bin/fish"
 
 link() {
   mkdir -p "$(dirname "$2")"
@@ -51,27 +50,19 @@ bootstrap() {
     curl -fsSL https://claude.ai/install.sh | bash
   fi
 
-  if ! grep -q "$FISH" /etc/shells; then
-    echo "$FISH" | sudo tee -a /etc/shells >/dev/null
-  fi
-
-  if [ "$(dscl . -read "/Users/$USER" UserShell | awk '{print $2}')" != "$FISH" ]; then
-    sudo chsh -s "$FISH" "$USER"
-  fi
-
-  link  "$DOTFILES/claude/CLAUDE.md"     "$HOME/.claude/CLAUDE.md"
-  link  "$DOTFILES/claude/settings.json" "$HOME/.claude/settings.json"
-  link  "$DOTFILES/codex/AGENTS.md"      "$HOME/.codex/AGENTS.md"
-  copy  "$DOTFILES/codex/config.toml"    "$HOME/.codex/config.toml"
-  link  "$DOTFILES/codex/skills"         "$HOME/.codex/skills/user"
-  link  "$DOTFILES/git/.gitconfig"       "$HOME/.gitconfig"
-  link  "$DOTFILES/git/ignore"           "$HOME/.config/git/ignore"
-  link  "$DOTFILES/karabiner/rules.json" "$HOME/.config/karabiner/assets/complex_modifications/rules.json"
-  link  "$DOTFILES/shell/.zprofile"      "$HOME/.zprofile"
-  link  "$DOTFILES/shell/config.fish"    "$HOME/.config/fish/config.fish"
-  link  "$DOTFILES/shell/starship.toml"  "$HOME/.config/starship.toml"
-  link  "$DOTFILES/zed/keymap.json"      "$HOME/.config/zed/keymap.json"
-  link  "$DOTFILES/zed/settings.json"    "$HOME/.config/zed/settings.json"
+  link  "$DOTFILES/claude/CLAUDE.md"         "$HOME/.claude/CLAUDE.md"
+  link  "$DOTFILES/claude/settings.json"     "$HOME/.claude/settings.json"
+  link  "$DOTFILES/codex/AGENTS.md"          "$HOME/.codex/AGENTS.md"
+  copy  "$DOTFILES/codex/config.toml"        "$HOME/.codex/config.toml"
+  link  "$DOTFILES/codex/skills"             "$HOME/.codex/skills/user"
+  link  "$DOTFILES/git/.gitconfig"           "$HOME/.gitconfig"
+  link  "$DOTFILES/git/ignore"               "$HOME/.config/git/ignore"
+  link  "$DOTFILES/karabiner/rules.json"     "$HOME/.config/karabiner/assets/complex_modifications/rules.json"
+  link  "$DOTFILES/shell/.zprofile"          "$HOME/.zprofile"
+  link  "$DOTFILES/shell/config.fish"        "$HOME/.config/fish/config.fish"
+  link  "$DOTFILES/shell/starship.toml"      "$HOME/.config/starship.toml"
+  link  "$DOTFILES/zed/keymap.json"          "$HOME/.config/zed/keymap.json"
+  link  "$DOTFILES/zed/settings.macos.jsonc" "$HOME/.config/zed/settings.json"
   touch "$HOME/.hushlogin"
 
   echo

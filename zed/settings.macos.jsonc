@@ -1,0 +1,109 @@
+{
+  // General settings
+  "cli_default_open_behavior": "existing_window",
+
+  // Appearance settings
+  "theme": "One Dark",
+  "buffer_font_family": "Hack Nerd Font",
+  "buffer_font_size": 14,
+  "buffer_font_fallbacks": ["D2CodingLigature Nerd Font"],
+  "ui_font_family": ".SystemUIFont",
+
+  // Editor settings
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000,
+    },
+  },
+  "diff_view_style": "unified",
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false,
+  },
+  "soft_wrap": "editor_width",
+  "format_on_save": "off",
+  "remove_trailing_whitespace_on_save": false,
+  "ensure_final_newline_on_save": false,
+
+  // Window & layout settings
+  "status_bar": {
+    "active_encoding_button": "enabled",
+  },
+  "tab_bar": {
+    "show_nav_history_buttons": false,
+    "show_tab_bar_buttons": false,
+  },
+  "diagnostics": {
+    "button": false,
+  },
+  "debugger": {
+    "button": false,
+  },
+  "title_bar": {
+    "show_user_picture": false,
+  },
+  "tabs": {
+    "file_icons": true,
+  },
+
+  // Panel settings
+  "project_panel": {
+    "dock": "left",
+    "default_width": 360,
+  },
+  "outline_panel": {
+    "button": false,
+  },
+  "git_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "button": false,
+  },
+
+  // Terminal settings
+  "terminal": {
+    "shell": {
+      "program": "/opt/homebrew/bin/fish",
+    },
+    "button": false,
+    "cursor_shape": "bar",
+    "blinking": "on",
+    "default_height": 640,
+  },
+
+  // Version control settings
+  "git": {
+    "inline_blame": {
+      "enabled": false,
+    },
+  },
+
+  // AI settings
+  "disable_ai": true,
+
+  // Theme overrides
+  "theme_overrides": {
+    "One Dark": {
+      "background": "#1d2027ff",
+      "panel.background": "#1d2027ff",
+      "tab_bar.background": "#1d2027ff",
+      "tab.inactive_background": "#1d2027ff",
+      "status_bar.background": "#1d2027ff",
+      "title_bar.background": "#1d2027ff",
+      "title_bar.inactive_background": "#1d2027ff",
+      "elevated_surface.background": "#1d2027ff",
+      "surface.background": "#1d2027ff",
+      "element.hover": "#282c33ff",
+      "element.active": "#33383fff",
+      "element.selected": "#33383fff",
+      "ghost_element.hover": "#282c33ff",
+      "ghost_element.active": "#33383fff",
+      "ghost_element.selected": "#33383fff",
+      "drop_target.background": "#33383f80",
+      "scrollbar.thumb.hover_background": "#c8ccd44c",
+      "scrollbar.track.border": "#33383fff",
+      "border": "#33383fff",
+    },
+  },
+}

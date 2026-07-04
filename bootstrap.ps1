@@ -44,7 +44,7 @@ function Bootstrap {
   New-Link  "$Dotfiles\git\.gitconfig"      "$env:USERPROFILE\.gitconfig"
   New-Link  "$Dotfiles\git\ignore"          "$env:USERPROFILE\.config\git\ignore"
   New-Link  "$Dotfiles\zed\keymap.json"     "$env:APPDATA\Zed\keymap.json"
-  New-Link  "$Dotfiles\zed\settings.json"   "$env:APPDATA\Zed\settings.json"
+  New-Link  "$Dotfiles\zed\settings.windows.jsonc" "$env:APPDATA\Zed\settings.json"
 
   Write-Host ""
   Write-Host "Bootstrap completed successfully!"

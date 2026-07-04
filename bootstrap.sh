@@ -63,7 +63,6 @@ bootstrap() {
   link  "$DOTFILES/shell/starship.toml"      "$HOME/.config/starship.toml"
   link  "$DOTFILES/zed/keymap.json"          "$HOME/.config/zed/keymap.json"
   link  "$DOTFILES/zed/settings.macos.jsonc" "$HOME/.config/zed/settings.json"
-  touch "$HOME/.hushlogin"
 
   echo
   echo "Bootstrap completed successfully!"

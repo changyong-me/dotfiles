@@ -24,8 +24,6 @@ Install-ScoopPackage gh
 Install-ScoopPackage git
 Install-ScoopPackage nerd-fonts/D2Coding-NF
 Install-ScoopPackage nerd-fonts/Hack-NF
-Install-ScoopPackage pwsh
-Install-ScoopPackage starship
 
 Install-PackageProvider -Name NuGet -Force | Out-Null
 Install-Module -Name Microsoft.WinGet.Client -Force -Repository PSGallery | Out-Null

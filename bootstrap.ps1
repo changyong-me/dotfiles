@@ -43,8 +43,6 @@ function Bootstrap {
   New-Link  "$Dotfiles\codex\skills"        "$env:USERPROFILE\.codex\skills\user"
   New-Link  "$Dotfiles\git\.gitconfig"      "$env:USERPROFILE\.gitconfig"
   New-Link  "$Dotfiles\git\ignore"          "$env:USERPROFILE\.config\git\ignore"
-  New-Link  "$Dotfiles\shell\profile.ps1"   "$Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
-  New-Link  "$Dotfiles\shell\starship.toml" "$env:USERPROFILE\.config\starship.toml"
   New-Link  "$Dotfiles\zed\keymap.json"     "$env:APPDATA\Zed\keymap.json"
   New-Link  "$Dotfiles\zed\settings.json"   "$env:APPDATA\Zed\settings.json"
 

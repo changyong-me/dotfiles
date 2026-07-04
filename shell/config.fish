@@ -1,6 +1,6 @@
 /opt/homebrew/bin/brew shellenv fish | source
 source ~/.orbstack/shell/init2.fish 2>/dev/null; or true
-fnm env --use-on-cd --shell fish | source
+fnm env --use-on-cd --version-file-strategy=recursive --shell fish | source
 
 fish_add_path /opt/homebrew/opt/rustup/bin
 fish_add_path ~/.cargo/bin

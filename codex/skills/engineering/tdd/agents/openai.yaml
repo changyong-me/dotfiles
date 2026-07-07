@@ -1,4 +1,4 @@
 interface:
   display_name: "TDD"
-  short_description: "Implement using behavior-focused red-green-refactor cycles"
-  default_prompt: "Use $tdd to implement using behavior-focused red-green-refactor cycles."
+  short_description: "Drive implementation with strict test-driven development"
+  default_prompt: "Use $tdd to drive implementation with strict test-driven development."

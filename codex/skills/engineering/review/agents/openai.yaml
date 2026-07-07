@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review"
+  short_description: "Review code changes through three independent lenses"
+  default_prompt: "Use $review to review code changes through three independent lenses."

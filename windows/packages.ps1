@@ -37,4 +37,4 @@ Install-WinGetPackage Modrinth.ModrinthApp
 Install-WinGetPackage RazerInc.RazerInstaller.Synapse4
 Install-WinGetPackage Valve.Steam
 Install-WinGetPackage ZedIndustries.Zed
-Install-WinGetPackage 9PLM9XGG6VKS # Codex
+Install-WinGetPackage 9PLM9XGG6VKS # ChatGPT

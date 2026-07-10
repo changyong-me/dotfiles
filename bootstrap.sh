@@ -46,15 +46,8 @@ bootstrap() {
   require rustup
   rustup default stable
 
-  if ! command -v claude >/dev/null 2>&1; then
-    curl -fsSL https://claude.ai/install.sh | bash
-  fi
-
-  link  "$DOTFILES/claude/CLAUDE.md"         "$HOME/.claude/CLAUDE.md"
-  link  "$DOTFILES/claude/settings.json"     "$HOME/.claude/settings.json"
   link  "$DOTFILES/codex/AGENTS.md"          "$HOME/.codex/AGENTS.md"
   copy  "$DOTFILES/codex/config.toml"        "$HOME/.codex/config.toml"
-  link  "$DOTFILES/codex/skills"             "$HOME/.codex/skills/user"
   link  "$DOTFILES/git/.gitconfig"           "$HOME/.gitconfig"
   link  "$DOTFILES/git/ignore"               "$HOME/.config/git/ignore"
   link  "$DOTFILES/karabiner/rules.json"     "$HOME/.config/karabiner/assets/complex_modifications/rules.json"

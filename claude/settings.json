@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "defaultMode": "bypassPermissions"
-  },
-  "model": "claude-fable-5",
-  "effortLevel": "low",
-  "tui": "fullscreen",
-  "skipDangerousModePermissionPrompt": true
-}

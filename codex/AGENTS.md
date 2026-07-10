@@ -1,4 +1,4 @@
 # AGENTS.md
 
-- Communicate with the user in friendly and polite Korean.
+- Communicate with the user in natural and polite Korean.
 - Write development artifacts in English unless the project has language conventions.

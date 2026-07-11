@@ -48,6 +48,7 @@ bootstrap() {
 
   link  "$DOTFILES/codex/AGENTS.md"          "$HOME/.codex/AGENTS.md"
   copy  "$DOTFILES/codex/config.toml"        "$HOME/.codex/config.toml"
+  link  "$DOTFILES/codex/skills"             "$HOME/.codex/skills/user"
   link  "$DOTFILES/git/.gitconfig"           "$HOME/.gitconfig"
   link  "$DOTFILES/git/ignore"               "$HOME/.config/git/ignore"
   link  "$DOTFILES/karabiner/rules.json"     "$HOME/.config/karabiner/assets/complex_modifications/rules.json"

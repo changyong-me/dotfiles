@@ -1,0 +1,7 @@
+interface:
+  display_name: "Loop for PR"
+  short_description: "Autonomously implement an issue and deliver a reviewed PR"
+  default_prompt: "Use $loop-for-pr to autonomously implement an issue and deliver a reviewed PR."
+
+policy:
+  allow_implicit_invocation: false

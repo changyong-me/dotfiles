@@ -1,0 +1,7 @@
+interface:
+  display_name: "Align Spec"
+  short_description: "Align a spec by dialogue, then break it into executable issues"
+  default_prompt: "Use $align-spec to align a spec by dialogue, then break it into executable issues."
+
+policy:
+  allow_implicit_invocation: false

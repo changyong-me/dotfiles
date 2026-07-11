@@ -18,8 +18,8 @@ A spec converges twice before it becomes work: with the user — a spec written 
 
 - Ask about whatever would change the spec: scope in and out, behavior, edge cases.
 - Ask one question at a time and wait for the answer — earlier answers change or eliminate later questions.
-- Record each agreement in the file immediately, before the next question.
-- Converged means no question remains whose answer would change the spec, and the user, shown the complete spec, has nothing to add. A point that cannot be settled now is written into the spec as explicitly unresolved.
+- Record each agreement in the file immediately, before the next question. If a point cannot be settled now, record it as explicitly unresolved.
+- Converged means no question remains whose answer would change the spec, and the user, shown the complete spec, explicitly says to proceed.
 
 ### 3. Decompose the spec into issues
 

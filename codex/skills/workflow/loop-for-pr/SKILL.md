@@ -5,34 +5,35 @@ description: Autonomously implement an issue and deliver a reviewed PR.
 
 # Loop for PR
 
-The deliverable is not just a PR but a PR that review has nothing left to say about. The user isn't watching the loop, so the PR must carry the story: judging what happened means reading the PR, not interrogating the agent. The loop has no round cap — the main agent is the circuit breaker.
+Deliver a PR that satisfies the spec and has no unresolved actionable review findings. Keep the PR description and comments sufficient to understand the implementation, material decisions, validation, and remaining blockers. Continue fix rounds only while they make meaningful progress and no stop signal applies.
 
 ## The workflow
 
 ### 1. Gather the input, pick the branch
 
-- The input is a spec — an `agent-ready` issue, one an agent can complete and verify with no human judgment in the middle; if missing, ask before doing anything else.
-- Work on the PR branch already open for this spec if there is one, otherwise on a fresh branch.
+- The input is a spec — an `agent-ready` issue, one an agent can complete and verify with no human judgment in the middle. If none can be identified, ask for one before modifying the repository.
+- Work on the branch associated with an existing PR for this spec; otherwise, create a fresh branch.
 
 ### 2. Implement the spec
 
-- Spawn a subagent — a fresh one each round, never the previous implementer — to implement the spec on the branch and commit its work. On fix rounds it also gets the findings to address and the decisions posted on the PR so far.
-- The implementer reports every decision it made on its own, each with the why — a point the spec left open that it closed: an ambiguity read one way, a tradeoff picked among valid designs, scope added or dropped.
+- Spawn a fresh implementation subagent each round to preserve independence between attempts. On fix rounds, give it the findings to address and the decisions posted on the PR so far.
+- The implementer reports material decisions that resolve an ambiguity, select among meaningful tradeoffs, or alter scope, including the rationale.
 - Open a draft PR if none exists, and post those decisions as a comment on the PR.
 
 ### 3. Review the PR
 
-- Run the `review` skill on the PR, with the spec issue as its spec — the Spec lens always runs here.
-- Post the findings as a single conversation comment on the PR — all lenses together, one comment per round, so each round reads as one unit in the PR timeline.
+- Run the `review` skill on the PR and provide the spec issue as the review spec; the Spec lens always runs here.
+- Validate each finding against the spec, code, and available test evidence before choosing a fix. Mark a finding as a false positive only when concrete evidence disproves its premise or failure path; keep every finding not disproven actionable.
+- Post one conversation comment per review round, with separate sections for all completed lenses and the disposition and rationale for each finding. Preserve false positives in the record instead of silently removing them.
 
 ### 4. Fix or finish
 
 - Any stop signal below stops the loop: the PR stays a draft, and the report gives the user the PR, the remaining findings, and why it stopped.
-- Findings left mean a fix round — back to implement the spec (step 2) with them. None left finishes it: the PR goes to the user marked ready for review.
-- Either exit can come back with a decision from the user; it lands as a comment on the PR before the loop resumes.
+- Actionable findings left mean a fix round — back to implement the spec (step 2) with them. Finish when the spec is satisfied and no actionable findings remain, then mark the PR ready for review.
+- If the user provides a decision after either exit, post it as a PR comment before resuming the loop.
 
 ## Stop signals
 
-- **The loop is not converging:** a finding survives a fix round and comes back, findings stop shrinking round over round or grow, one round's fix undoes another's.
-- **A finding points at a defect in the spec itself:** two requirements that cannot both hold, or wording the implementation and the finding each read their own way — with both readings defensible. No fix round settles this; only the user amending the spec does.
-- **Blocked on an action only a human can take:** credentials, a deploy, an external system. The report says exactly what the user must do to unblock.
+- **The loop is not converging:** the same root-cause finding survives a fix intended to address it, fixes repeatedly reintroduce resolved findings, or two consecutive rounds show no meaningful reduction in finding severity or scope. Compare the findings themselves, not their count alone.
+- **A finding points at a defect in the spec itself:** two requirements cannot both hold, or the implementation and finding rely on different defensible readings. Stop and request an explicit spec decision instead of starting another fix round.
+- **Blocked on an action only a human can take:** providing required credentials, completing a deployment, or operating an external system unavailable to the agent. The report says exactly what the user must do to unblock.

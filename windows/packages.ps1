@@ -35,6 +35,7 @@ Install-WinGetPackage Discord.Discord
 Install-WinGetPackage Google.Chrome
 Install-WinGetPackage Modrinth.ModrinthApp
 Install-WinGetPackage RazerInc.RazerInstaller.Synapse4
+Install-WinGetPackage Spotify.Spotify
 Install-WinGetPackage Valve.Steam
 Install-WinGetPackage ZedIndustries.Zed
 Install-WinGetPackage 9PLM9XGG6VKS # ChatGPT

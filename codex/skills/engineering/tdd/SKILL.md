@@ -5,7 +5,7 @@ description: Drive implementation with strict test-driven development. Use whene
 
 # TDD
 
-Implement each requested behavior in a short Red–Green–Refactor cycle. Define the behavior through the real interface before writing its implementation so the test guides the design.
+Take one requested behavior through Red, Green, and Refactor before starting the next, and let each completed cycle inform the next test. Define the behavior through the real interface before writing its implementation so the test guides the design.
 
 ## The workflow
 
@@ -22,39 +22,36 @@ Implement each requested behavior in a short Red–Green–Refactor cycle. Defin
 ### 3. Green — make it pass with the minimum
 
 - Make the smallest implementation change that makes the failing test and all existing tests pass. Leave future behavior for its own cycle.
-- Run the full test suite when practical. If it is too expensive or unavailable, run the broadest relevant regression suite and report the limitation. Confirm that the selected validation passes before proceeding.
+- Run the full test suite when practical. If it is too expensive or unavailable, run the broadest relevant regression suite and report the limitation.
+- Once the selected validation passes, proceed to Refactor (step 4); the cycle is not complete yet.
 
 ### 4. Refactor — settle the debt on green
 
-- Inspect the new code, the existing code affected by the behavior, and the tests for debt left by the smallest change that reached Green: duplication, hardcoded shortcuts, names that lie.
-- Settle what the inspection finds — improve names, remove duplication, extract structure — and run the tests after each step. Correct or undo a step that causes a regression before continuing.
-- Keep refactoring limited to structure. Record newly discovered behavior for the next Red cycle instead of adding it during refactoring.
+- Inspect the new code, affected existing code, and tests for problems left by the minimum change that reached Green: duplication, hardcoded shortcuts, and misleading names. Fix what you find, but keep the changes limited to structure.
+- Run the tests after each refactoring step. Correct or undo regressions before continuing, and record newly discovered behavior for the next Red cycle instead of adding it during refactoring.
 - Then go back to Red (step 2) for the next behavior in the list; stop when the list is empty.
 
-## Good tests
+## Test quality
 
-A test suite exists to give one signal: red means a behavior broke; green means behaviors are intact. Every quality below protects that signal.
+A good test fails when the behavior it covers breaks and stays green while that behavior remains intact.
 
-- **The assertion:** observable outcomes, not implementation — return values, state changes visible through the interface, emitted events, side effects at real boundaries. The acid test: could you rename internals, merge classes, or restructure modules without touching this test?
-- **The call path:** use the real interface through which production callers reach the code — public API, HTTP endpoint, CLI, or module boundary. Prefer integration-style tests with real internal collaborators wired together; isolate the behavior, not the class.
 - **One behavior per test:** a failure should point at the broken behavior without reading the test body.
-- **Doubles:** prefer fakes or stubs at external or nondeterministic boundaries such as third-party APIs, networks, clocks, randomness, and payment providers. Use real internal collaborators unless isolation is necessary to express the behavior reliably.
+- **Production call path:** use the real interface through which production callers reach the code — public API, HTTP endpoint, CLI, or module boundary. Prefer integration-style tests with real internal collaborators.
+- **Observable outcomes:** assert on return values, interface-visible state changes, emitted events, or boundary side effects instead of implementation details.
+- **Test doubles:** prefer fakes or stubs at external or nondeterministic boundaries such as third-party APIs, networks, clocks, randomness, and payment providers.
 
-## Bad tests
+A bad test can pass while the behavior it covers is broken, fail while that behavior is correct, or obscure the cause of failure.
 
-Each of these corrupts the red/green signal — it goes red when nothing broke, stays green when something did, or fails so noisily that nobody trusts it.
-
-- **Implementation-coupled:** asserts on internal call sequences, private state, or conversations between mocked internal collaborators; verifying through a side channel (querying the database instead of reading back through the interface) is the same coupling.
-- **Tautological:** restates its own setup — stub a mock to return X, assert the result is X; or copy the production formula into the expected value. Expected values come from an independent source of truth: a known-good literal, a worked example, the spec.
-- **Flaky:** depends on wall-clock time, sleeps, execution order, shared mutable state, or live networks. Treat flaky tests as defects; isolate their effect when necessary and address the cause within the authorized scope.
-- **Speculative and over-specified:** covers behavior nobody asked for, or pins incidental details (exact error strings, non-contractual ordering, full-object snapshot equality).
+- **Tautological:** asserts a value supplied by its own stub or copies production logic into the expected result. Expected values should come from an independent source of truth such as a known-good literal, worked example, or the spec.
+- **Flaky:** depends on wall-clock time, sleeps, execution order, shared mutable state, or live networks. Treat flakiness as a defect; fix the cause within the requested scope, or contain its effect when that is not possible.
+- **Speculative and over-specified:** covers behavior nobody asked for, or pins details the contract does not guarantee, such as exact error text, ordering, or full-object snapshots.
 
 ## Mocking and seams
 
-A seam is the place where a test can swap a real dependency for a controlled one without editing the code under test — and seams have to be built.
+A seam is an explicit boundary where a test can replace a real dependency with a controlled one without editing the code under test.
 
-- **Wrap what you don't own:** prefer a thin interface you own (a port/adapter or gateway class) over scattered third-party SDK calls. Use that interface as the seam so tests depend on application-owned types rather than vendor types.
+- **Wrap what you don't own:** prefer a thin application-owned interface such as a port, adapter, or gateway over scattered third-party SDK calls. Use it as the seam so tests depend on application types rather than vendor types.
 - **Inject time and randomness:** code that calls the system clock or a global RNG directly has no seam — take a clock/RNG (or the current time/seed) as a parameter or constructor dependency.
-- **Prefer fakes over interaction mocks:** a fake is a working lightweight implementation (in-memory repository, fake payment gateway with real balance logic); tests still assert on outcomes. Reserve interaction-verifying mocks ("was `charge()` called with X?") for cases where the interaction is the observable outcome (e.g., "sends exactly one notification").
-- **Keep fakes honest:** a fake that drifts from the real implementation makes every test that uses it lie; when a fake underpins many tests, run one shared contract suite against both it and the real adapter.
-- **No seam is design feedback:** needing to mock deep internals or patch module globals indicates a missing boundary. Introduce the seam first (extract the dependency, inject it), then test through it.
+- **Prefer fakes over interaction mocks:** a fake is a working lightweight implementation, such as an in-memory repository. Tests using fakes still assert on outcomes. Use interaction-verifying mocks only when the interaction itself is observable behavior, such as sending exactly one notification.
+- **Validate shared fakes:** when a fake supports many tests, run the same contract suite against the fake and the real adapter to detect drift.
+- **Treat missing seams as design feedback:** if testing requires deep internal mocks or patched globals, express the desired boundary in the failing test and introduce the smallest seam during Green.

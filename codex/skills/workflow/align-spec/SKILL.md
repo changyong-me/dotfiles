@@ -29,14 +29,14 @@ Maintain the evolving spec in a temporary file as the source of truth. Align it 
 
 ### 4. Get approval, then create
 
-- Show the user the spec and the drafted issues with their ordering, and get approval before creating or modifying GitHub issues. Include unresolved points explicitly in the approval request.
+- Show the user the spec and the drafted issues with their ordering, and get approval before creating or modifying issues. Include unresolved points explicitly in the approval request.
 - On approval, publish the spec as an issue first: replace the source issue's body if the alignment started from one, create a new issue otherwise. If the spec is split, the spec issue also serves as the umbrella and lists the child issues.
 - Create the child issues in dependency order — so an issue can reference what it depends on by number — and report all URLs.
 - If the spec was a single executable unit, the spec issue itself is the deliverable.
 
 ## Decomposition criteria
 
-- **Independently executable:** each issue is completable and verifiable without waiting on a sibling, roughly one PR in size.
-- **Cut along a behavior:** prefer behavior-complete issues that can be verified independently; avoid splitting layers that only become testable when combined.
-- **Dependencies stated in the issues themselves:** what must land first, referenced by title in the draft and by issue number once created.
-- **Labeled:** `agent-ready` (an agent can complete and verify it with no human judgment in the middle) or `human-in-the-loop` (a taste or design call, human-eyes verification, or an action only a human can take — credentials, external systems).
+- **Vertical slices:** split by behavior rather than layer, including every layer needed to deliver and verify each behavior end to end.
+- **Independent execution:** keep each issue small enough for one PR and independently completable and verifiable once its stated dependencies are met.
+- **Explicit dependencies:** state only prerequisites that must land before the issue can be completed or verified, and explain what each one provides. Refer to each dependency by title in the draft and by issue number once created.
+- **Execution mode:** apply the `agent-ready` label when an agent can complete and verify the issue without human judgment or action. Apply `human-in-the-loop` when a design decision, manual verification, credential, or unavailable external system requires a person.

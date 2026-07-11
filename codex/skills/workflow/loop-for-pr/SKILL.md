@@ -11,12 +11,12 @@ Deliver a PR that satisfies the spec and has no unresolved actionable review fin
 
 ### 1. Gather the input, pick the branch
 
-- The input is a spec — an `agent-ready` issue, one an agent can complete and verify with no human judgment in the middle. If none can be identified, ask for one before modifying the repository.
+- The input is a spec provided as an issue labeled `agent-ready`. An agent must be able to complete and verify it without human judgment or action. If none can be identified, ask for one before modifying the repository.
 - Work on the branch associated with an existing PR for this spec; otherwise, create a fresh branch.
 
 ### 2. Implement the spec
 
-- Spawn a fresh implementation subagent each round to preserve independence between attempts. On fix rounds, give it the findings to address and the decisions posted on the PR so far.
+- Spawn a fresh implementation subagent to implement the spec on the branch and commit its work. On fix rounds, give it the findings to address and the decisions posted on the PR so far.
 - The implementer reports material decisions that resolve an ambiguity, select among meaningful tradeoffs, or alter scope, including the rationale.
 - Open a draft PR if none exists, and post those decisions as a comment on the PR.
 

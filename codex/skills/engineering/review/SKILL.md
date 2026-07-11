@@ -28,25 +28,25 @@ Run three independent review lenses so each receives a focused pass: Spec, Risks
 
 Does the change satisfy the provided spec without introducing unrequested user-visible behavior or contractual changes? A finding cites the requirement it violates or the scope it exceeds.
 
-- **The yardstick:** evaluate against the provided spec. Treat unrequested user-visible behavior as a mismatch even when it seems reasonable.
+- **Review basis:** evaluate against the provided spec. Treat unrequested user-visible behavior as a mismatch even when it seems reasonable.
 - **Mismatches in both directions:** required behavior that is absent, wrong, or half-done (the main path works but the specified edge cases, limits, or error paths don't); and unrequested changes to user-visible behavior, contracts, permissions, or policy.
 - **Ambiguous spec:** if multiple defensible readings would materially change the expected behavior or review verdict, report the ambiguity instead of treating one reading as authoritative.
 
 ## Risks lens
 
-What can break at runtime because of this change? A finding identifies a concrete failure path introduced, exposed, or materially worsened by the change, including the input, state, or timing that triggers it.
+What can break at runtime because of this change? A finding traces a reachable input, state, or timing condition to an incorrect outcome and shows how the change creates, makes reachable, or materially worsens that failure path. An unverified scenario is not enough.
 
 - **Security:** attacker-controlled input reaching a query, command, file path, or rendered output; an operation missing the permission check its siblings have; secrets hardcoded, logged, or leaked through error responses.
 - **Inputs and operating conditions:** boundary values, production-scale volumes, two executions interleaving over shared state, or an assumed order that the code does not enforce.
 - **Failure paths:** state left behind by a partial failure, retries without idempotency, missing transaction boundaries, resources acquired but never released.
-- **Verification gaps:** changed behavior, bug fixes, or failure paths without a test that exercises the real path; a finding explains which regression could escape the current validation.
-- **Beyond the diff:** callers and shared data that still assume the old behavior, persisted data and schema migrations, API contracts of external callers, and changes only safe in one deploy order.
+- **Verification gaps:** changed behavior, bug fixes, or concrete failure paths not exercised by existing validation; a finding explains which regression could escape, not merely that no new dedicated test was added.
+- **Beyond the diff:** existing callers and shared data that still assume the old behavior, persisted data and schema migrations, API contracts of external callers, and changes only safe in one deploy order.
 
 ## Maintainability lens
 
-What maintenance cost does the change introduce or materially worsen? A finding identifies a concrete future change or maintenance task that becomes harder or more error-prone because of the change, not a taste or unrelated pre-existing debt.
+What maintenance cost does the change introduce or materially worsen? A finding shows how the change makes a concrete maintenance task vulnerable to missed or divergent updates. Code smells, possible future variants, taste, and unrelated pre-existing debt are not enough.
 
-- **Code that fights its surroundings:** unidiomatic use of the language, framework, or libraries; inconsistency with the codebase's own conventions.
-- **The code itself:** names that obscure intent, duplicated rules, branching more complex than the cases require, boundaries callers must reach through, tests coupled to implementation details.
-- **Logic in the wrong place:** logic that primarily uses data owned by another object, deep navigation chains, layers that only delegate, one logical change scattered across many files, or one module that changes for unrelated reasons.
-- **Abstractions missing or unearned:** related values without a shared type, primitives standing in for domain concepts, generality with no current use, inheritance contracts that subclasses mostly ignore.
+- **Project conventions:** unidiomatic use or inconsistency that bypasses an established project mechanism or makes the changed code harder to use correctly.
+- **Local clarity and complexity:** names that obscure intent, duplicated rules that can diverge, branching more complex than the current cases require, tests coupled to implementation details.
+- **Ownership and placement:** logic outside the component that owns its data or policy, cross-component access that bypasses the owning component's interface, or modules that combine unrelated reasons to change.
+- **Abstraction fit:** an existing invariant or nontrivial rule duplicated across current paths; generality, indirection, or contracts with no current use.

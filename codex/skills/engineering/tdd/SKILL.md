@@ -1,11 +1,9 @@
 ---
 name: tdd
-description: Drive implementation with strict test-driven development. Use whenever implementing or changing code with testable behavior, or reviewing or writing tests, even if the user doesn't mention tests. Skip for throwaway prototypes and changes with nothing to test.
+description: Drive implementation with strict test-driven development. Use whenever implementing or changing code with testable behavior, or reviewing or writing tests. Skip for throwaway prototypes and changes with nothing to test.
 ---
 
 # TDD
-
-Take one requested behavior through Red, Green, and Refactor before starting the next, and let each completed cycle inform the next test. Define the behavior through the real interface before writing its implementation so the test guides the design.
 
 ## The workflow
 

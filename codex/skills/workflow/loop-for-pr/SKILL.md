@@ -5,8 +5,6 @@ description: Autonomously implement an issue and deliver a reviewed PR.
 
 # Loop for PR
 
-Deliver a PR that satisfies the spec and has no unresolved actionable review findings. Keep the PR description and comments sufficient to understand the implementation, material decisions, validation, and remaining blockers. Continue fix rounds only while they make meaningful progress and no stop signal applies.
-
 ## The workflow
 
 ### 1. Gather the input, pick the branch
@@ -16,9 +14,9 @@ Deliver a PR that satisfies the spec and has no unresolved actionable review fin
 
 ### 2. Implement the spec
 
-- Spawn a fresh implementation subagent to implement the spec on the branch and commit its work. On fix rounds, give it the findings to address and the decisions posted on the PR so far.
-- The implementer reports material decisions that resolve an ambiguity, select among meaningful tradeoffs, or alter scope, including the rationale.
-- Open a draft PR if none exists, and post those decisions as a comment on the PR.
+- Spawn a fresh implementation subagent to implement the spec on the branch and commit its work. On fix rounds, give it the findings to address and the current implementation decisions.
+- The implementer reports only non-obvious decisions that materially affect the current design, including the rationale. Omit requirements, change summaries, and routine implementation details.
+- Open a draft PR if none exists. Keep those decisions in the PR description, replacing any decisions that later fixes supersede.
 
 ### 3. Review the PR
 
@@ -28,7 +26,7 @@ Deliver a PR that satisfies the spec and has no unresolved actionable review fin
 
 ### 4. Fix or finish
 
-- Any stop signal below stops the loop: the PR stays a draft, and the report gives the user the PR, the remaining findings, and why it stopped.
+- Any stop signal below stops the loop and leaves the PR as a draft. The report gives the user the PR, the remaining findings, and why it stopped.
 - Actionable findings left mean a fix round — back to implement the spec (step 2) with them. Finish when the spec is satisfied and no actionable findings remain, then mark the PR ready for review.
 - If the user provides a decision after either exit, post it as a PR comment before resuming the loop.
 

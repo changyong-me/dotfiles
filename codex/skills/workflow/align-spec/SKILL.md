@@ -5,8 +5,6 @@ description: Align a spec by dialogue, then break it into executable issues.
 
 # Align Spec
 
-Maintain the evolving spec in a temporary file as the source of truth. Align it first with the request, then with the codebase before decomposing it into executable issues.
-
 ## The workflow
 
 ### 1. Inspect the code, start the spec file

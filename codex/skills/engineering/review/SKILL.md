@@ -1,11 +1,9 @@
 ---
 name: review
-description: Review code changes through three independent lenses. Use when the user asks to review a branch, PR, commit range, or diff, or to run one lens within a larger review. Skip lighter feedback requests.
+description: Review code changes through three independent lenses. Use when the user asks to review code changes for actionable defects or to run one lens within a larger review. Skip when actionable findings are not needed.
 ---
 
 # Review
-
-Run three independent review lenses so each receives a focused pass: Spec, Risks, and Maintainability. Preserve overlapping findings because the lens that surfaces an issue is useful review context.
 
 ## The workflow
 
@@ -46,7 +44,7 @@ What can break at runtime because of this change? A finding traces a reachable i
 
 What maintenance cost does the change introduce or materially worsen? A finding shows how the change makes a concrete maintenance task vulnerable to missed or divergent updates. Code smells, possible future variants, taste, and unrelated pre-existing debt are not enough.
 
-- **Project conventions:** unidiomatic use or inconsistency that bypasses an established project mechanism or makes the changed code harder to use correctly.
+- **Conventions and idioms:** departures from established language, ecosystem, or project conventions that bypass a standard mechanism or make the changed code harder to use correctly.
 - **Local clarity and complexity:** names that obscure intent, duplicated rules that can diverge, branching more complex than the current cases require, tests coupled to implementation details.
 - **Ownership and placement:** logic outside the component that owns its data or policy, cross-component access that bypasses the owning component's interface, or modules that combine unrelated reasons to change.
 - **Abstraction fit:** an existing invariant or nontrivial rule duplicated across current paths; generality, indirection, or contracts with no current use.

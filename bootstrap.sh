@@ -14,12 +14,6 @@ copy() {
   cp "$1" "$2"
 }
 
-require() {
-  command -v "$1" >/dev/null 2>&1 && return
-  echo "$1: command not found" >&2
-  exit 1
-}
-
 bootstrap() {
   if ! command -v brew >/dev/null 2>&1; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -33,15 +27,9 @@ bootstrap() {
   fi
 
   bash "$DOTFILES/macos/defaults.sh"
-
-  require brew
   brew bundle --file="$DOTFILES/macos/Brewfile"
-
-  require fnm
   fnm install --lts
   fnm default lts-latest
-
-  require rustup
   rustup default stable
 
   link  "$DOTFILES/codex/AGENTS.md"          "$HOME/.codex/AGENTS.md"

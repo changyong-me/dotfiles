@@ -9,8 +9,8 @@ description: Review code changes through three independent lenses. Use when the 
 
 ### 1. Gather inputs
 
-- The input is the diff to review — a branch, commit range, PR, or working tree changes. If it cannot be inferred from the request or repository state, ask for it before starting the review.
-- A spec — what the change is supposed to do: a requirements doc, issue, or prose description — may come with it. If absent, skip the Spec lens, run the other two, and report the Spec lens as skipped.
+- The input is the diff to review: a branch, commit range, PR, or working tree changes. If it cannot be inferred from the request or repository state, ask for it before starting the review.
+- A requirements document, issue, or prose description may be provided as the spec for what the change is supposed to do. If no spec is provided, skip the Spec lens, run the other two, and report the Spec lens as skipped.
 
 ### 2. Run the review
 
@@ -20,7 +20,7 @@ description: Review code changes through three independent lenses. Use when the 
 ### 3. Deliver results
 
 - Present each lens as a separate section and preserve its findings and ordering without merging or re-ranking them.
-- A lens with no findings is reported as clean, and a skipped Spec lens is reported as skipped for lack of a spec — absence must be distinguishable from silence.
+- A lens with no findings is reported as clean, and a skipped Spec lens is reported as skipped for lack of a spec; absence must be distinguishable from silence.
 
 ## Spec lens
 

@@ -27,7 +27,7 @@ description: Autonomously implement an issue and deliver a reviewed PR.
 ### 4. Fix or finish
 
 - Any stop signal below stops the loop and leaves the PR as a draft. The report gives the user the PR, the remaining findings, and why it stopped.
-- Actionable findings left mean a fix round — back to implement the spec (step 2) with them. Finish when the spec is satisfied and no actionable findings remain, then mark the PR ready for review.
+- When actionable findings remain, start a fix round: return to step 2 and address them while implementing the spec. Finish when the spec is satisfied and no actionable findings remain, then mark the PR ready for review.
 - If the user provides a decision after either exit, post it as a PR comment before resuming the loop.
 
 ## Stop signals

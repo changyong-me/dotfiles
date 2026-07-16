@@ -22,13 +22,12 @@ description: Align a spec by dialogue, then break it into executable issues.
 
 - Inspect the code beyond the initial pass until each requirement is mapped to its implementation location and relevant dependencies; only then decompose the spec into issues.
 - Split the spec into issues meeting the criteria below, so that together they cover the whole spec with no piece left unassigned. If the spec is already one executable unit, do not force a split.
-- Draft each issue in full: title, a body that links back to the spec issue, and its label.
+- Draft each executable issue with a title, self-contained body, and label. If multiple issues need shared context, dependency tracking, or overall progress tracking, also draft an epic with all spec-wide context and the child issue titles.
 
 ### 4. Get approval, then create
 
-- Show the user the spec and the drafted issues with their ordering, and get approval before creating or modifying issues. Include unresolved points explicitly in the approval request.
-- On approval, publish the spec as an issue first: replace the source issue's body if the alignment started from one, create a new issue otherwise. If the spec is split, the spec issue also serves as the umbrella and lists the child issues.
-- Create any child issues in dependency order so that each can reference its dependencies by number, then report the URLs of all created or updated issues.
+- Show the user the spec and the drafted issue structure, including any epic and dependencies between issues, and get approval before creating issues. Include unresolved points explicitly in the approval request.
+- On approval, create the approved issues, then report the URLs of all created issues.
 
 ## Decomposition criteria
 

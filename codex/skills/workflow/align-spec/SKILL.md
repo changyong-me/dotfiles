@@ -7,27 +7,28 @@ description: Align a spec by dialogue, then break it into executable issues.
 
 ## The workflow
 
-### 1. Inspect the code, start the spec file
+### 1. Align the spec
 
-- Inspect the code and existing issues needed to understand the current behavior affected by the request.
-- Start a spec file in a temporary location as working memory, not a repo artifact. Seed it with the current understanding of the request and revise it through questions.
+- Map the request as a design tree in which every decision branches into the decisions that depend on it, then interview the user under the interview rules.
+- Once the frontier is empty and every branch has been visited with nothing left silently assumed, present the complete shared understanding. Proceed to issue decomposition only after the user confirms it.
 
-### 2. Converge by questioning
+### 2. Decompose the spec into issues
 
-- Ask only about unresolved choices that materially affect scope, behavior, edge cases, or acceptance criteria.
-- Record each agreement in the file immediately, before the next question. If a point cannot be settled now, record it as explicitly unresolved.
-- Consider the spec converged only when no remaining question would change it and the user has reviewed the complete spec and explicitly approved proceeding.
-
-### 3. Decompose the spec into issues
-
-- Inspect the code beyond the initial pass until each requirement is mapped to its implementation location and relevant dependencies; only then decompose the spec into issues.
+- Inspect the code until each requirement is mapped to its implementation location and relevant dependencies; only then decompose the spec into issues.
 - Split the spec into issues meeting the criteria below, so that together they cover the whole spec with no piece left unassigned. If the spec is already one executable unit, do not force a split.
 - Draft each executable issue with a title, self-contained body, and label. If multiple issues need shared context, dependency tracking, or overall progress tracking, also draft an epic with all spec-wide context and the child issue titles.
 
-### 4. Get approval, then create
+### 3. Review and create the issues
 
-- Show the user the spec and the drafted issue structure, including any epic and dependencies between issues, and get approval before creating issues. Include unresolved points explicitly in the approval request.
-- On approval, create the approved issues, then report the URLs of all created issues.
+- Show the user the spec and the drafted issue structure, including any epic, labels, and blocking dependencies. Iterate until the user approves the granularity, dependency graph, and any splits or merges.
+- Create the approved issues in dependency order, blockers first, substituting issue numbers for dependency title references as each dependent issue is created. Then report the URLs of every created issue.
+
+## Interview rules
+
+- **Frontier:** treat the frontier as every decision whose prerequisites are settled. Ask the whole frontier in each round, number every question, and include a recommended answer.
+- **Facts and decisions:** find facts instead of asking the user, and put each decision to the user instead of settling it by inference. When a frontier question needs a fact from the code, existing issues, or environment, spawn a subagent to investigate it.
+- **Dependency handling:** defer only questions that depend on an unresolved decision or investigation, and continue with the rest of the frontier.
+- **Round progression:** interview the user relentlessly, round by round. Wait for the user's answers, then incorporate completed investigations, update the tree with settled decisions and newly revealed branches, and recompute the frontier before starting the next round.
 
 ## Decomposition criteria
 

@@ -48,8 +48,8 @@ A bad test can pass while the behavior it covers is broken, fail while that beha
 
 A seam is an explicit boundary where a test can replace a real dependency with a controlled one without editing the code under test.
 
-- **Wrap what you don't own:** prefer a thin application-owned interface such as a port, adapter, or gateway over scattered third-party SDK calls. Use it as the seam so tests depend on application types rather than vendor types.
+- **Wrap external dependencies:** prefer a thin application-owned interface such as a port, adapter, or gateway over scattered third-party SDK calls. Use it as the seam so tests depend on application types rather than vendor types.
 - **Inject time and randomness:** code that calls the system clock or a global RNG directly has no seam; take a clock/RNG (or the current time/seed) as a parameter or constructor dependency.
-- **Prefer fakes over interaction mocks:** a fake is a working lightweight implementation, such as an in-memory repository. Tests using fakes still assert on outcomes. Use interaction-verifying mocks only when the interaction itself is observable behavior, such as sending exactly one notification.
+- **Prefer fakes over mocks:** a fake is a working lightweight implementation, such as an in-memory repository. Tests using fakes still assert on outcomes. Use interaction-verifying mocks only when the interaction itself is observable behavior, such as sending exactly one notification.
 - **Validate shared fakes:** when a fake supports many tests, run the same contract suite against the fake and the real adapter to detect drift.
-- **Treat missing seams as design feedback:** if testing requires deep internal mocks or patched globals, express the desired boundary in the failing test and introduce the smallest seam during Green.
+- **Learn from missing seams:** if testing requires deep internal mocks or patched globals, express the desired boundary in the failing test and introduce the smallest seam during Green.

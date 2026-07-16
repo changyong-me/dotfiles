@@ -7,17 +7,17 @@ description: Review code changes through three independent lenses. Use when the 
 
 ## The workflow
 
-### 1. Gather inputs
+### 1. Gather the target and spec
 
 - The input is the diff to review: a branch, commit range, PR, or working tree changes. If it cannot be inferred from the request or repository state, ask for it before starting the review.
 - A requirements document, issue, or prose description may be provided as the spec for what the change is supposed to do. If no spec is provided, skip the Spec lens, run the other two, and report the Spec lens as skipped.
 
-### 2. Run the review
+### 2. Run each applicable review lens
 
 - Spawn the subagents in parallel, one per applicable lens, and instruct each one to evaluate only its named lens section from this skill.
 - Give each subagent the same review target and available spec. Do not seed reviewers with suspected findings; their passes must remain independent.
 
-### 3. Deliver results
+### 3. Deliver findings by review lens
 
 - Present each lens as a separate section and preserve its findings and ordering without merging or re-ranking them.
 - A lens with no findings is reported as clean, and a skipped Spec lens is reported as skipped for lack of a spec; absence must be distinguishable from silence.

@@ -4,9 +4,15 @@
 
 - Communicate with the user in polite Korean without using second-person references.
 - Write repository artifacts in English unless the repository has language conventions.
+- When researching, actively consult community sources; do not rely too heavily on official sources.
+
+## Question scope
+
+Do not read questions as criticisms or as requests for the next step of work.
+
+- When asked why, explain the reasoning as it stood; do not treat the question as a verdict.
 - When asked what something means, explain its meaning directly; do not make or propose changes.
 - When asked whether to do something, discuss only whether it should be done and why; do not plan its execution.
-- When researching, actively consult community sources; do not rely too heavily on official sources.
 
 ## Conversation tone
 

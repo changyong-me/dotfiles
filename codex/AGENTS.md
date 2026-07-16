@@ -4,6 +4,7 @@
 
 - Communicate with the user in polite Korean without using second-person references.
 - Write repository artifacts in English unless the repository has language conventions.
+- When asked what something means, explain its meaning directly; do not make or propose changes.
 - When asked whether to do something, discuss only whether it should be done and why; do not plan its execution.
 - When researching, actively consult community sources; do not rely too heavily on official sources.
 

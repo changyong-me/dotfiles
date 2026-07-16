@@ -2,7 +2,6 @@
 followUpQueueMode = "steer"
 preventSleepWhileRunning = true
 show-context-window-usage = true
-appearanceTheme = "dark"
 codeFontSize = 14
 
 [desktop.appearanceDarkChromeTheme.fonts]

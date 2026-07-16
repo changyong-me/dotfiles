@@ -15,7 +15,7 @@ description: Review code changes through three independent lenses. Use when the 
 ### 2. Run the review
 
 - Spawn the subagents in parallel, one per applicable lens, and instruct each one to evaluate only its named lens section from this skill.
-- Give each subagent the same review target and give the spec only to the Spec lens. Do not seed reviewers with suspected findings; their passes must remain independent.
+- Give each subagent the same review target and available spec. Do not seed reviewers with suspected findings; their passes must remain independent.
 
 ### 3. Deliver results
 
@@ -26,25 +26,25 @@ description: Review code changes through three independent lenses. Use when the 
 
 Does the change satisfy the provided spec without introducing unrequested user-visible behavior or contractual changes? A finding cites the requirement it violates or the scope it exceeds.
 
-- **Review basis:** evaluate against the provided spec. Treat unrequested user-visible behavior as a mismatch even when it seems reasonable.
-- **Mismatches in both directions:** required behavior that is absent, wrong, or half-done (the main path works but the specified edge cases, limits, or error paths don't); and unrequested changes to user-visible behavior, contracts, permissions, or policy.
-- **Ambiguous spec:** if multiple defensible readings would materially change the expected behavior or review verdict, report the ambiguity instead of treating one reading as authoritative.
+- **Ambiguity:** multiple defensible readings that would materially change the expected behavior or review verdict; report the ambiguity rather than choosing one as authoritative.
+- **Requirements:** required behavior that is absent, partial, or appears implemented but produces the wrong result for a reachable input, state, boundary, or failure path.
+- **Scope:** unrequested changes to user-visible behavior, contracts, permissions, or policy, even when they seem reasonable.
+- **Documentation:** documentation, examples, or repository guidance within the change's scope that now contradict the specified behavior or architecture.
 
 ## Risks lens
 
 What can break at runtime because of this change? A finding traces a reachable input, state, or timing condition to an incorrect outcome and shows how the change creates, makes reachable, or materially worsens that failure path. An unverified scenario is not enough.
 
-- **Security:** attacker-controlled input reaching a query, command, file path, or rendered output; an operation missing the permission check its siblings have; secrets hardcoded, logged, or leaked through error responses.
-- **Inputs and operating conditions:** boundary values, production-scale volumes, two executions interleaving over shared state, or an assumed order that the code does not enforce.
-- **Failure paths:** state left behind by a partial failure, retries without idempotency, missing transaction boundaries, resources acquired but never released.
-- **Verification gaps:** changed behavior, bug fixes, or concrete failure paths not exercised by existing validation; a finding explains which regression could escape, not merely that no new dedicated test was added.
-- **Beyond the diff:** existing callers and shared data that still assume the old behavior, persisted data and schema migrations, API contracts of external callers, and changes only safe in one deploy order.
+- **Security:** attacker-controlled inputs, authorization boundaries, or sensitive data flows that the change leaves exploitable or exposed.
+- **Operating conditions:** input, scale, timing, concurrency, or ordering conditions that reach a wrong outcome because the code assumes constraints it does not enforce.
+- **Failure handling:** partial failures, retries, transaction boundaries, or cleanup paths that leave incorrect state or unreleased resources.
+- **Integration:** callers, persisted data, external contracts, migrations, or deploy ordering that still depend on the old behavior.
+- **Verification gaps:** changed behavior or a concrete failure path not exercised by existing validation; a finding identifies the specific regression that could escape, not merely the absence of a dedicated test.
 
-## Maintainability lens
+## Simplicity lens
 
-What maintenance cost does the change introduce or materially worsen? A finding shows how the change makes a concrete maintenance task vulnerable to missed or divergent updates. Code smells, possible future variants, taste, and unrelated pre-existing debt are not enough.
+What unnecessary complexity does the change introduce or materially worsen? A finding shows how to simplify it without changing required behavior. Future needs, taste, minor cleanup, and unrelated pre-existing complexity are not enough.
 
-- **Conventions and idioms:** departures from established language, ecosystem, or project conventions that bypass a standard mechanism or make the changed code harder to use correctly.
-- **Local clarity and complexity:** names that obscure intent, duplicated rules that can diverge, branching more complex than the current cases require, tests coupled to implementation details.
-- **Ownership and placement:** logic outside the component that owns its data or policy, cross-component access that bypasses the owning component's interface, or modules that combine unrelated reasons to change.
-- **Abstraction fit:** an existing invariant or nontrivial rule duplicated across current paths; generality, indirection, or contracts with no current use.
+- **Reuse and consolidation:** functionality reimplemented despite an existing facility, or nontrivial rules repeated across paths, when one implementation would preserve behavior without adding equal or greater indirection.
+- **Design surface:** layers or contracts that materially enlarge the design surface without serving a current requirement, invariant, real boundary, or mitigation of a concrete risk.
+- **State and work:** runtime state or work that a direct path can remove while preserving the result and required operating characteristics.

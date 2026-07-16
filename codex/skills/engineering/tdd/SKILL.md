@@ -1,6 +1,6 @@
 ---
 name: tdd
-description: Drive implementation with strict test-driven development. Use whenever implementing or changing code with testable behavior, or reviewing or writing tests. Skip for throwaway prototypes and changes with nothing to test.
+description: Drive implementation with strict test-driven development. Use when implementing non-trivial and testable behavior or fixing a reproducible bug.
 ---
 
 # TDD

@@ -1,6 +1,6 @@
 ---
 name: review
-description: Review code changes through three independent lenses. Use when the user asks to review code changes for actionable defects or to run one lens within a larger review. Skip when actionable findings are not needed.
+description: Review code changes through three independent lenses. Use when the user requests a formal code review or when required by other workflows.
 ---
 
 # Review

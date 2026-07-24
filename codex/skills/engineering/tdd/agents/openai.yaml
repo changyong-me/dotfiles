@@ -1,4 +1,0 @@
-interface:
-  display_name: "TDD"
-  short_description: "Drive implementation with strict test-driven development"
-  default_prompt: "Use $tdd to drive implementation with strict test-driven development."

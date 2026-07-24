@@ -30,6 +30,7 @@ Install-Module -Name Microsoft.WinGet.Client -Force -Repository PSGallery | Out-
 Repair-WinGetPackageManager -Force -Latest
 
 Install-WinGetPackage AdGuard.AdGuard
+Install-WinGetPackage Anthropic.Claude
 Install-WinGetPackage Blizzard.BattleNet "${env:ProgramFiles(x86)}\Battle.net"
 Install-WinGetPackage Discord.Discord
 Install-WinGetPackage Google.Chrome
@@ -38,4 +39,3 @@ Install-WinGetPackage RazerInc.RazerInstaller.Synapse4
 Install-WinGetPackage Spotify.Spotify
 Install-WinGetPackage Valve.Steam
 Install-WinGetPackage ZedIndustries.Zed
-Install-WinGetPackage 9PLM9XGG6VKS # ChatGPT

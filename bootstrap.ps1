@@ -10,11 +10,6 @@ function New-Link($Target, $Path) {
   New-Item -ItemType SymbolicLink -Path $Path -Target $Target | Out-Null
 }
 
-function Copy-File($Source, $Path) {
-  New-Item -ItemType Directory -Force -Path (Split-Path $Path) | Out-Null
-  Copy-Item $Source $Path -Force
-}
-
 function Bootstrap {
   if (-not $Principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
     throw "Run from an administrator PowerShell."
@@ -38,12 +33,10 @@ function Bootstrap {
   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Force
   & "$Dotfiles\windows\packages.ps1"
 
-  New-Link  "$Dotfiles\codex\AGENTS.md"     "$env:USERPROFILE\.codex\AGENTS.md"
-  Copy-File "$Dotfiles\codex\config.toml"   "$env:USERPROFILE\.codex\config.toml"
-  New-Link  "$Dotfiles\codex\skills"        "$env:USERPROFILE\.codex\skills\user"
-  New-Link  "$Dotfiles\git\.gitconfig"      "$env:USERPROFILE\.gitconfig"
-  New-Link  "$Dotfiles\git\ignore"          "$env:USERPROFILE\.config\git\ignore"
-  New-Link  "$Dotfiles\zed\keymap.json"     "$env:APPDATA\Zed\keymap.json"
+  New-Link  "$Dotfiles\claude\CLAUDE.md"           "$env:USERPROFILE\.claude\CLAUDE.md"
+  New-Link  "$Dotfiles\git\.gitconfig"             "$env:USERPROFILE\.gitconfig"
+  New-Link  "$Dotfiles\git\ignore"                 "$env:USERPROFILE\.config\git\ignore"
+  New-Link  "$Dotfiles\zed\keymap.json"            "$env:APPDATA\Zed\keymap.json"
   New-Link  "$Dotfiles\zed\settings.windows.jsonc" "$env:APPDATA\Zed\settings.json"
 
   Write-Host ""

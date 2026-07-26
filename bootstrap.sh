@@ -27,8 +27,9 @@ bootstrap() {
   fnm default lts-latest
   rustup default stable
 
-  link  "$DOTFILES/claude/CLAUDE.md"         "$HOME/.claude/CLAUDE.md"
   link  "$DOTFILES/claude/skills"            "$HOME/.claude/skills/user"
+  link  "$DOTFILES/claude/CLAUDE.md"         "$HOME/.claude/CLAUDE.md"
+  link  "$DOTFILES/claude/settings.json"     "$HOME/.claude/settings.json"
   link  "$DOTFILES/git/.gitconfig"           "$HOME/.gitconfig"
   link  "$DOTFILES/git/ignore"               "$HOME/.config/git/ignore"
   link  "$DOTFILES/karabiner/rules.json"     "$HOME/.config/karabiner/assets/complex_modifications/rules.json"

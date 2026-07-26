@@ -33,8 +33,9 @@ function Bootstrap {
   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Force
   & "$Dotfiles\windows\packages.ps1"
 
-  New-Link  "$Dotfiles\claude\CLAUDE.md"           "$env:USERPROFILE\.claude\CLAUDE.md"
   New-Link  "$Dotfiles\claude\skills"              "$env:USERPROFILE\.claude\skills\user"
+  New-Link  "$Dotfiles\claude\CLAUDE.md"           "$env:USERPROFILE\.claude\CLAUDE.md"
+  New-Link  "$Dotfiles\claude\settings.json"       "$env:USERPROFILE\.claude\settings.json"
   New-Link  "$Dotfiles\git\.gitconfig"             "$env:USERPROFILE\.gitconfig"
   New-Link  "$Dotfiles\git\ignore"                 "$env:USERPROFILE\.config\git\ignore"
   New-Link  "$Dotfiles\zed\keymap.json"            "$env:APPDATA\Zed\keymap.json"

@@ -27,19 +27,19 @@ bootstrap() {
   fnm default lts-latest
   rustup default stable
 
-  link  "$DOTFILES/claude/skills/batch-grill-me" "$HOME/.claude/skills/batch-grill-me"
-  link  "$DOTFILES/claude/skills/code-review"    "$HOME/.claude/skills/code-review"
-  link  "$DOTFILES/claude/skills/to-spec"        "$HOME/.claude/skills/to-spec"
-  link  "$DOTFILES/claude/CLAUDE.md"             "$HOME/.claude/CLAUDE.md"
-  link  "$DOTFILES/claude/settings.json"         "$HOME/.claude/settings.json"
-  link  "$DOTFILES/git/.gitconfig"               "$HOME/.gitconfig"
-  link  "$DOTFILES/git/ignore"                   "$HOME/.config/git/ignore"
-  link  "$DOTFILES/karabiner/rules.json"         "$HOME/.config/karabiner/assets/complex_modifications/rules.json"
-  link  "$DOTFILES/shell/.zprofile"              "$HOME/.zprofile"
-  link  "$DOTFILES/shell/config.fish"            "$HOME/.config/fish/config.fish"
-  link  "$DOTFILES/shell/starship.toml"          "$HOME/.config/starship.toml"
-  link  "$DOTFILES/zed/keymap.json"              "$HOME/.config/zed/keymap.json"
-  link  "$DOTFILES/zed/settings.macos.jsonc"     "$HOME/.config/zed/settings.json"
+  link  "$DOTFILES/claude/skills/align-intent" "$HOME/.claude/skills/align-intent"
+  link  "$DOTFILES/claude/skills/publish-spec" "$HOME/.claude/skills/publish-spec"
+  link  "$DOTFILES/claude/skills/review-pr"    "$HOME/.claude/skills/review-pr"
+  link  "$DOTFILES/claude/CLAUDE.md"           "$HOME/.claude/CLAUDE.md"
+  link  "$DOTFILES/claude/settings.json"       "$HOME/.claude/settings.json"
+  link  "$DOTFILES/git/.gitconfig"             "$HOME/.gitconfig"
+  link  "$DOTFILES/git/ignore"                 "$HOME/.config/git/ignore"
+  link  "$DOTFILES/karabiner/rules.json"       "$HOME/.config/karabiner/assets/complex_modifications/rules.json"
+  link  "$DOTFILES/shell/.zprofile"            "$HOME/.zprofile"
+  link  "$DOTFILES/shell/config.fish"          "$HOME/.config/fish/config.fish"
+  link  "$DOTFILES/shell/starship.toml"        "$HOME/.config/starship.toml"
+  link  "$DOTFILES/zed/keymap.json"            "$HOME/.config/zed/keymap.json"
+  link  "$DOTFILES/zed/settings.macos.jsonc"   "$HOME/.config/zed/settings.json"
 
   echo
   echo "Bootstrap completed successfully!"

@@ -10,10 +10,9 @@ Synthesize the current conversation and codebase understanding into a spec and p
 
 ## Process
 
-1. **Explore the codebase**: Explore the codebase to understand its current state, if not already explored.
-2. **Write the spec**: Write the spec covering the spec contents, and judge which label fits.
-3. **Confirm with the user**: Present the spec and the label. If the user asks for changes, apply them and confirm again.
-4. **Publish the spec**: Publish the confirmed spec to the project issue tracker with the confirmed label.
+1. Explore the codebase to understand its current state, if not already explored.
+2. Write the spec covering the spec contents, and judge which label fits. Then present the spec and the label. If the user asks for changes, apply them and confirm again.
+3. Publish the confirmed spec to the project issue tracker with the confirmed label.
 
 ## Spec contents
 

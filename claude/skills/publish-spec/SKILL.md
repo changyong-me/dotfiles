@@ -16,8 +16,8 @@ Synthesize the current conversation and codebase understanding into a spec and p
 
 ## Spec contents
 
-- **Problem**: The problem as the user experiences it.
-- **Solution**: The solution as the user will experience it.
+- **Problem**: The problem as the end user experiences it.
+- **Solution**: The solution as the end user will experience it.
 - **User stories**: A long list of user stories that covers every actor and every behavior the feature supports.
 - **Decisions**: Every decision settled in the conversation that constrains how the feature will be built or tested.
 - **Out of scope**: Everything settled as out of scope in the conversation.

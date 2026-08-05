@@ -1,6 +1,17 @@
 {
+  "extraKnownMarketplaces": {
+    "mattpocock": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/mattpocock/skills.git"
+      }
+    }
+  },
   "autoMemoryEnabled": false,
+  "skipWorkflowUsageWarning": true,
   "inputNeededNotifEnabled": true,
   "agentPushNotifEnabled": true,
-  "skipWorkflowUsageWarning": true
+  "enabledPlugins": {
+    "mattpocock-skills@mattpocock": true
+  }
 }

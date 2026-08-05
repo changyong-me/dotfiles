@@ -33,9 +33,6 @@ function Bootstrap {
   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Force
   & "$Dotfiles\windows\packages.ps1"
 
-  New-Link  "$Dotfiles\claude\skills\align-intent" "$env:USERPROFILE\.claude\skills\align-intent"
-  New-Link  "$Dotfiles\claude\skills\publish-spec" "$env:USERPROFILE\.claude\skills\publish-spec"
-  New-Link  "$Dotfiles\claude\skills\review-pr"    "$env:USERPROFILE\.claude\skills\review-pr"
   New-Link  "$Dotfiles\claude\CLAUDE.md"           "$env:USERPROFILE\.claude\CLAUDE.md"
   New-Link  "$Dotfiles\claude\settings.json"       "$env:USERPROFILE\.claude\settings.json"
   New-Link  "$Dotfiles\git\.gitconfig"             "$env:USERPROFILE\.gitconfig"

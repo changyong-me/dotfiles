@@ -9,6 +9,11 @@ link() {
   ln -sfn "$1" "$2"
 }
 
+copy() {
+  mkdir -p "$(dirname "$2")"
+  cp "$1" "$2"
+}
+
 bootstrap() {
   if ! command -v brew >/dev/null 2>&1; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -29,6 +34,8 @@ bootstrap() {
 
   link  "$DOTFILES/claude/CLAUDE.md"         "$HOME/.claude/CLAUDE.md"
   link  "$DOTFILES/claude/settings.json"     "$HOME/.claude/settings.json"
+  link  "$DOTFILES/codex/AGENTS.md"          "$HOME/.codex/AGENTS.md"
+  copy  "$DOTFILES/codex/config.toml"        "$HOME/.codex/config.toml"
   link  "$DOTFILES/git/.gitconfig"           "$HOME/.gitconfig"
   link  "$DOTFILES/git/ignore"               "$HOME/.config/git/ignore"
   link  "$DOTFILES/karabiner/rules.json"     "$HOME/.config/karabiner/assets/complex_modifications/rules.json"

@@ -1,0 +1,8 @@
+[desktop]
+followUpQueueMode = "steer"
+preventSleepWhileRunning = true
+show-context-window-usage = true
+codeFontSize = 14
+
+[desktop.appearanceDarkChromeTheme.fonts]
+code = '"Hack Nerd Font", "D2CodingLigature Nerd Font"'

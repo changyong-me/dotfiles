@@ -21,7 +21,6 @@
     "quick_actions": false,
   },
   "soft_wrap": "editor_width",
-  "format_on_save": "off",
   "remove_trailing_whitespace_on_save": false,
   "ensure_final_newline_on_save": false,
 

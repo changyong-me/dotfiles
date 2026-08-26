@@ -1,11 +1,11 @@
 brew "fish"
-brew "fnm"
 brew "gh"
 brew "mas"
-brew "pnpm"
+brew "railway"
 brew "rustup"
 brew "starship"
 brew "uv"
+brew "vite-plus"
 cask "adguard"
 cask "alt-tab"
 cask "chatgpt"
@@ -19,3 +19,4 @@ cask "spotify"
 cask "thaw"
 cask "zed"
 mas "Proton Pass for Safari", id: 6502835663
+mas "Xcode", id: 497799835

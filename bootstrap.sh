@@ -28,8 +28,6 @@ bootstrap() {
 
   bash "$DOTFILES/macos/defaults.sh"
   brew bundle --file="$DOTFILES/macos/Brewfile"
-  fnm install --lts
-  fnm default lts-latest
   rustup default stable
 
   link  "$DOTFILES/claude/CLAUDE.md"         "$HOME/.claude/CLAUDE.md"

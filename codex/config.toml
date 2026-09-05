@@ -3,6 +3,8 @@ followUpQueueMode = "steer"
 preventSleepWhileRunning = true
 show-context-window-usage = true
 codeFontSize = 14
+open-link-in-target-preference = "external-browser"
+open-local-url-in-target-preference = "external-browser"
 
 [desktop.appearanceDarkChromeTheme.fonts]
 code = '"Hack Nerd Font", "D2CodingLigature Nerd Font"'

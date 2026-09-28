@@ -40,8 +40,6 @@ function Bootstrap {
 
   New-Link  "$Dotfiles\claude\CLAUDE.md"           "$env:USERPROFILE\.claude\CLAUDE.md"
   New-Link  "$Dotfiles\claude\settings.json"       "$env:USERPROFILE\.claude\settings.json"
-  New-Link  "$Dotfiles\codex\AGENTS.md"            "$env:USERPROFILE\.codex\AGENTS.md"
-  Copy-File "$Dotfiles\codex\config.toml"          "$env:USERPROFILE\.codex\config.toml"
   New-Link  "$Dotfiles\git\.gitconfig"             "$env:USERPROFILE\.gitconfig"
   New-Link  "$Dotfiles\git\ignore"                 "$env:USERPROFILE\.config\git\ignore"
   New-Link  "$Dotfiles\zed\keymap.json"            "$env:APPDATA\Zed\keymap.json"

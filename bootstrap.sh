@@ -30,10 +30,14 @@ bootstrap() {
   brew bundle --file="$DOTFILES/macos/Brewfile"
   rustup default stable
 
+  if [ -d /Applications/Xcode.app ]; then
+    sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+    sudo xcodebuild -license accept
+    sudo xcodebuild -runFirstLaunch
+  fi
+
   link  "$DOTFILES/claude/CLAUDE.md"         "$HOME/.claude/CLAUDE.md"
   link  "$DOTFILES/claude/settings.json"     "$HOME/.claude/settings.json"
-  link  "$DOTFILES/codex/AGENTS.md"          "$HOME/.codex/AGENTS.md"
-  copy  "$DOTFILES/codex/config.toml"        "$HOME/.codex/config.toml"
   link  "$DOTFILES/git/.gitconfig"           "$HOME/.gitconfig"
   link  "$DOTFILES/git/ignore"               "$HOME/.config/git/ignore"
   link  "$DOTFILES/karabiner/rules.json"     "$HOME/.config/karabiner/assets/complex_modifications/rules.json"

@@ -6,12 +6,8 @@ DOTFILES_REPO="https://github.com/changyong-me/dotfiles.git"
 
 link() {
   mkdir -p "$(dirname "$2")"
+  if [ -d "$2" ] && [ ! -L "$2" ]; then rmdir "$2"; fi
   ln -sfn "$1" "$2"
-}
-
-copy() {
-  mkdir -p "$(dirname "$2")"
-  cp "$1" "$2"
 }
 
 bootstrap() {
@@ -37,6 +33,7 @@ bootstrap() {
     sudo xcodebuild -runFirstLaunch
   fi
 
+  link  "$DOTFILES/claude/skills"            "$HOME/.claude/skills"
   link  "$DOTFILES/claude/CLAUDE.md"         "$HOME/.claude/CLAUDE.md"
   link  "$DOTFILES/claude/settings.json"     "$HOME/.claude/settings.json"
   link  "$DOTFILES/git/.gitconfig"           "$HOME/.gitconfig"

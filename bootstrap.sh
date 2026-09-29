@@ -29,6 +29,7 @@ bootstrap() {
   bash "$DOTFILES/macos/defaults.sh"
   brew bundle --file="$DOTFILES/macos/Brewfile"
   rustup default stable
+  vp env setup
 
   if [ -d /Applications/Xcode.app ]; then
     sudo xcode-select -s /Applications/Xcode.app/Contents/Developer

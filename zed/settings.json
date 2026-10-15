@@ -6,7 +6,7 @@
   "theme": "One Dark",
   "buffer_font_family": "Hack Nerd Font",
   "buffer_font_size": 14,
-  "buffer_font_fallbacks": ["D2CodingLigature Nerd Font"],
+  "buffer_font_fallbacks": ["D2KodingLigature Nerd Font"],
   "ui_font_family": ".SystemUIFont",
 
   // Editor settings
@@ -62,9 +62,6 @@
 
   // Terminal settings
   "terminal": {
-    "shell": {
-      "program": "/opt/homebrew/bin/fish",
-    },
     "button": false,
     "cursor_shape": "bar",
     "blinking": "on",
@@ -103,6 +100,15 @@
       "scrollbar.thumb.hover_background": "#c8ccd44c",
       "scrollbar.track.border": "#33383fff",
       "border": "#33383fff",
+    },
+  },
+
+  // Platform overrides
+  "macos": {
+    "terminal": {
+      "shell": {
+        "program": "/opt/homebrew/bin/fish",
+      },
     },
   },
 }

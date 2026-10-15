@@ -31,13 +31,13 @@ function Install-Dotfiles {
   reg import "$Dotfiles\windows\registry.reg"
   & "$Dotfiles\windows\packages.ps1"
 
-  New-SymbolicLink "$Dotfiles\claude\skills"              "$env:USERPROFILE\.claude\skills"
-  New-SymbolicLink "$Dotfiles\claude\CLAUDE.md"           "$env:USERPROFILE\.claude\CLAUDE.md"
-  New-SymbolicLink "$Dotfiles\claude\settings.json"       "$env:USERPROFILE\.claude\settings.json"
-  New-SymbolicLink "$Dotfiles\git\.gitconfig"             "$env:USERPROFILE\.gitconfig"
-  New-SymbolicLink "$Dotfiles\git\ignore"                 "$env:USERPROFILE\.config\git\ignore"
-  New-SymbolicLink "$Dotfiles\zed\keymap.json"            "$env:APPDATA\Zed\keymap.json"
-  New-SymbolicLink "$Dotfiles\zed\settings.windows.jsonc" "$env:APPDATA\Zed\settings.json"
+  New-SymbolicLink "$Dotfiles\claude\skills"        "$env:USERPROFILE\.claude\skills"
+  New-SymbolicLink "$Dotfiles\claude\CLAUDE.md"     "$env:USERPROFILE\.claude\CLAUDE.md"
+  New-SymbolicLink "$Dotfiles\claude\settings.json" "$env:USERPROFILE\.claude\settings.json"
+  New-SymbolicLink "$Dotfiles\git\.gitconfig"       "$env:USERPROFILE\.gitconfig"
+  New-SymbolicLink "$Dotfiles\git\ignore"           "$env:USERPROFILE\.config\git\ignore"
+  New-SymbolicLink "$Dotfiles\zed\keymap.json"      "$env:APPDATA\Zed\keymap.json"
+  New-SymbolicLink "$Dotfiles\zed\settings.json"    "$env:APPDATA\Zed\settings.json"
 }
 
 function Bootstrap {

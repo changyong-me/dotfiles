@@ -20,16 +20,16 @@ function Install-WinGetPackage($Id, $Location) {
 }
 
 Add-ScoopBucket nerd-fonts
-Install-ScoopPackage ffmpeg
 Install-ScoopPackage gh
 Install-ScoopPackage git
 Install-ScoopPackage nerd-fonts/D2Coding-NF
 Install-ScoopPackage nerd-fonts/Hack-NF
-Install-ScoopPackage yt-dlp
 
-Install-PackageProvider -Name NuGet -Force | Out-Null
-Install-Module -Name Microsoft.WinGet.Client -Force -Repository PSGallery | Out-Null
-Repair-WinGetPackageManager -Force -Latest
+if (-not (Get-Command winget -ErrorAction SilentlyContinue)) {
+  Install-PackageProvider -Name NuGet -Force | Out-Null
+  Install-Module -Name Microsoft.WinGet.Client -Force -Repository PSGallery | Out-Null
+  Repair-WinGetPackageManager -Force -Latest
+}
 
 Install-WinGetPackage AdGuard.AdGuard
 Install-WinGetPackage Anthropic.Claude

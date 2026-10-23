@@ -23,6 +23,7 @@
 - Holding a key repeats it instead of showing accents
 - A double space doesn't insert a period
 - The Fn key does nothing on its own
+- Control-Option-Command-F13 selects the next input source
 
 ## Symlinks
 

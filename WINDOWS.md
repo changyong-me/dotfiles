@@ -2,7 +2,7 @@
 
 ## Packages
 
-- Scoop: `D2Coding-NF`, `Hack-NF` from the `nerd-fonts` bucket
+- Scoop: `nerd-fonts/D2Coding-NF`, `nerd-fonts/Hack-NF`
 - WinGet: `AdGuard.AdGuard`, `Blizzard.BattleNet`, `Discord.Discord`, `Git.Git`, `GitHub.cli`, `Google.Chrome`, `Modrinth.ModrinthApp`, `Spotify.Spotify`, `Valve.Steam`, `ZedIndustries.Zed`
 
 ## Settings
@@ -13,7 +13,7 @@
 - The desktop uses large icons
 - The taskbar is left-aligned with no Widgets, Task View, or search box
 - Start shows only Settings next to the power button
-- Caps Lock and left Control are swapped
+- Caps Lock and Left Ctrl are swapped
 - Pressing Shift five times doesn't turn on Sticky Keys
 - Fast Startup is off
 

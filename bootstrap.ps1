@@ -31,7 +31,6 @@ function Install-Dotfiles {
   reg import "$Dotfiles\windows\registry.reg"
   & "$Dotfiles\windows\packages.ps1"
 
-  New-SymbolicLink "$Dotfiles\claude\skills"        "$env:USERPROFILE\.claude\skills"
   New-SymbolicLink "$Dotfiles\claude\CLAUDE.md"     "$env:USERPROFILE\.claude\CLAUDE.md"
   New-SymbolicLink "$Dotfiles\claude\settings.json" "$env:USERPROFILE\.claude\settings.json"
   New-SymbolicLink "$Dotfiles\git\.gitconfig"       "$env:USERPROFILE\.gitconfig"

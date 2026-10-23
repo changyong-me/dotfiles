@@ -16,6 +16,7 @@
 - Caps Lock and Left Ctrl are swapped
 - Pressing Shift five times doesn't turn on Sticky Keys
 - Fast Startup is off
+- sudo is enabled inline
 
 ## Symlinks
 

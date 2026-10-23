@@ -35,8 +35,6 @@ install_dotfiles() {
     sudo xcodebuild -runFirstLaunch
   fi
 
-  symlink "$DOTFILES/claude/CLAUDE.md"     "$HOME/.claude/CLAUDE.md"
-  symlink "$DOTFILES/claude/settings.json" "$HOME/.claude/settings.json"
   symlink "$DOTFILES/git/.gitconfig"       "$HOME/.gitconfig"
   symlink "$DOTFILES/git/ignore"           "$HOME/.config/git/ignore"
   symlink "$DOTFILES/karabiner/rules.json" "$HOME/.config/karabiner/assets/complex_modifications/rules.json"

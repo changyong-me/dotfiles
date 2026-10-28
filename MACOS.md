@@ -29,6 +29,7 @@
 
 | Repository             | Destination                                                   |
 | ---------------------- | ------------------------------------------------------------- |
+| `claude/CLAUDE.md`     | `~/.claude/CLAUDE.md`                                         |
 | `git/.gitconfig`       | `~/.gitconfig`                                                |
 | `git/ignore`           | `~/.config/git/ignore`                                        |
 | `karabiner/rules.json` | `~/.config/karabiner/assets/complex_modifications/rules.json` |

@@ -22,6 +22,7 @@
 
 | Repository          | Destination                        |
 | ------------------- | ---------------------------------- |
+| `claude/CLAUDE.md`  | `%USERPROFILE%\.claude\CLAUDE.md`  |
 | `git/.gitconfig`    | `%USERPROFILE%\.gitconfig`         |
 | `git/ignore`        | `%USERPROFILE%\.config\git\ignore` |
 | `zed/keymap.json`   | `%APPDATA%\Zed\keymap.json`        |

@@ -2,9 +2,6 @@
     name = Park Changyong
     email = me@changyong.me
 
-[core]
-    pager = less -+X -FR
-
 [fetch]
     prune = true
 

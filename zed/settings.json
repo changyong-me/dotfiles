@@ -7,7 +7,6 @@
   "buffer_font_family": "Hack Nerd Font",
   "buffer_font_size": 14,
   "buffer_font_fallbacks": ["D2KodingLigature Nerd Font"],
-  "ui_font_family": ".SystemUIFont",
 
   // Editor settings
   "autosave": {
@@ -65,7 +64,7 @@
     "button": false,
     "cursor_shape": "bar",
     "blinking": "on",
-    "default_height": 640,
+    "default_height": 600,
   },
 
   // Version control settings

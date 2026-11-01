@@ -4,7 +4,7 @@
 
 - Homebrew formulae: `ffmpeg`, `fish`, `gh`, `mas`, `railway`, `rustup`, `starship`, `uv`, `vite-plus`, `yt-dlp`
 - Homebrew casks: `adguard`, `alt-tab`, `capsomnia`, `font-d2coding-nerd-font`, `font-hack-nerd-font`, `google-chrome`, `karabiner-elements`, `orbstack`, `spotify`, `thaw`, `zed`
-- Homebrew mas: Final Cut Pro (424389933), Logic Pro (634148309), Proton Pass for Safari (6502835663), Xcode (497799835)
+- Homebrew mas: Final Cut Pro (424389933), Logic Pro (634148309), Xcode (497799835)
 
 ## Programs
 

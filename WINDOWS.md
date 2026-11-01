@@ -20,10 +20,11 @@
 
 ## Symlinks
 
-| Repository          | Destination                        |
-| ------------------- | ---------------------------------- |
-| `claude/CLAUDE.md`  | `%USERPROFILE%\.claude\CLAUDE.md`  |
-| `git/.gitconfig`    | `%USERPROFILE%\.gitconfig`         |
-| `git/ignore`        | `%USERPROFILE%\.config\git\ignore` |
-| `zed/keymap.json`   | `%APPDATA%\Zed\keymap.json`        |
-| `zed/settings.json` | `%APPDATA%\Zed\settings.json`      |
+| Repository             | Destination                           |
+| ---------------------- | ------------------------------------- |
+| `claude/CLAUDE.md`     | `%USERPROFILE%\.claude\CLAUDE.md`     |
+| `claude/settings.json` | `%USERPROFILE%\.claude\settings.json` |
+| `git/.gitconfig`       | `%USERPROFILE%\.gitconfig`            |
+| `git/ignore`           | `%USERPROFILE%\.config\git\ignore`    |
+| `zed/keymap.json`      | `%APPDATA%\Zed\keymap.json`           |
+| `zed/settings.json`    | `%APPDATA%\Zed\settings.json`         |

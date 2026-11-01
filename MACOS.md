@@ -33,6 +33,7 @@
 | Repository             | Destination                                                   |
 | ---------------------- | ------------------------------------------------------------- |
 | `claude/CLAUDE.md`     | `~/.claude/CLAUDE.md`                                         |
+| `claude/settings.json` | `~/.claude/settings.json`                                     |
 | `git/.gitconfig`       | `~/.gitconfig`                                                |
 | `git/ignore`           | `~/.config/git/ignore`                                        |
 | `karabiner/rules.json` | `~/.config/karabiner/assets/complex_modifications/rules.json` |

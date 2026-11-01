@@ -10,20 +10,23 @@
 
 - The default `rustup` toolchain is stable
 - The `vite-plus` shell environment is set up
-- `xcodebuild` works from the terminal
+- The `xcodebuild` command works from the terminal
 - The rule in `karabiner/rules.json` is enabled
 
 ## Settings
 
-- All file extensions are shown
-- Finder shows the path bar, uses list view, and sorts folders first, in windows and on the desktop
-- The desktop shows no external or removable drives
-- The Dock is on the left at 48px, locked, minimizes with scale, and shows no recent apps
-- Spaces stay in the order I put them
-- Holding a key repeats it instead of showing accents
-- A double space doesn't insert a period
-- The Fn key does nothing on its own
+- The Dock is 48px and its size is locked
+- The Dock is on the left of the screen
+- The Dock shows no suggested or recent apps
+- Holding a key in ABC repeats it instead of showing accents
+- Pressing the Fn key does nothing on its own
 - Control-Option-Command-F13 selects the next input source
+- Caps Lock doesn't switch to and from ABC
+- Spelling isn't corrected automatically
+- Words aren't capitalized automatically
+- Inline predictive text isn't shown
+- A double space doesn't add a period
+- Smart quotes and dashes aren't used
 
 ## Symlinks
 

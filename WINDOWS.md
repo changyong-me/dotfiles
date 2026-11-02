@@ -2,7 +2,6 @@
 
 ## Packages
 
-- Scoop: `nerd-fonts/D2Coding-NF`, `nerd-fonts/Hack-NF`
 - WinGet: `AdGuard.AdGuard`, `Blizzard.BattleNet`, `Discord.Discord`, `Git.Git`, `GitHub.cli`, `Google.Chrome`, `Modrinth.ModrinthApp`, `Spotify.Spotify`, `Valve.Steam`, `ZedIndustries.Zed`
 
 ## Settings

@@ -1,7 +1,3 @@
-eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(/opt/homebrew/bin/brew shellenv zsh)"
+export PATH="$HOMEBREW_PREFIX/opt/rustup/bin:$PATH"
 source ~/.orbstack/shell/init.zsh 2>/dev/null || :
-. "$HOME/.config/vite-plus/env"
-
-export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"

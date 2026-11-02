@@ -27,6 +27,13 @@
 - Inline predictive text isn't shown
 - A double space doesn't add a period
 - Smart quotes and dashes aren't used
+- The desktop shows no external or removable drives
+- New Finder windows show the startup disk
+- All file extensions are shown
+- The Finder keeps folders on top
+- The Finder searches the current folder
+- Finder windows use list view
+- Finder windows show the path bar
 
 ## Symlinks
 

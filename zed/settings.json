@@ -1,7 +1,4 @@
 {
-  // General settings
-  "cli_default_open_behavior": "existing_window",
-
   // Appearance settings
   "theme": "One Dark",
   "buffer_font_family": "Hack Nerd Font",

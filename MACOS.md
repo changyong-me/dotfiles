@@ -2,14 +2,14 @@
 
 ## Packages
 
-- Homebrew formulae: `ffmpeg`, `gh`, `mas`, `railway`, `rustup`, `starship`, `uv`, `vite-plus`, `yt-dlp`
+- Homebrew formulae: `ffmpeg`, `gh`, `mas`, `pnpm`, `railway`, `rustup`, `starship`, `uv`, `yt-dlp`
 - Homebrew casks: `adguard`, `alt-tab`, `capsomnia`, `google-chrome`, `karabiner-elements`, `orbstack`, `spotify`, `thaw`, `zed`
 - Homebrew mas: Final Cut Pro (424389933), Logic Pro (634148309), Xcode (497799835)
 
 ## Programs
 
+- The global `pnpm` Node.js runtime is LTS
 - The default `rustup` toolchain is stable
-- The `vite-plus` shell environment is set up
 - The `xcodebuild` command works from the terminal
 - The rule in `karabiner/rules.json` is enabled
 

@@ -7,6 +7,5 @@ alias ls='ls -G'
 alias ll='ls -lh'
 alias la='ls -lAh'
 
-. "$HOME/.config/vite-plus/env"
 eval "$(starship init zsh)"
 preexec() { print; }

@@ -95,13 +95,4 @@
       "border": "#33383fff",
     },
   },
-
-  // Platform overrides
-  "macos": {
-    "terminal": {
-      "shell": {
-        "program": "/opt/homebrew/bin/fish",
-      },
-    },
-  },
 }

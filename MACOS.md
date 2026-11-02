@@ -2,7 +2,7 @@
 
 ## Packages
 
-- Homebrew formulae: `ffmpeg`, `fish`, `gh`, `mas`, `railway`, `rustup`, `starship`, `uv`, `vite-plus`, `yt-dlp`
+- Homebrew formulae: `ffmpeg`, `gh`, `mas`, `railway`, `rustup`, `starship`, `uv`, `vite-plus`, `yt-dlp`
 - Homebrew casks: `adguard`, `alt-tab`, `capsomnia`, `google-chrome`, `karabiner-elements`, `orbstack`, `spotify`, `thaw`, `zed`
 - Homebrew mas: Final Cut Pro (424389933), Logic Pro (634148309), Xcode (497799835)
 
@@ -45,7 +45,7 @@
 | `git/ignore`           | `~/.config/git/ignore`                                        |
 | `karabiner/rules.json` | `~/.config/karabiner/assets/complex_modifications/rules.json` |
 | `shell/.zprofile`      | `~/.zprofile`                                                 |
-| `shell/config.fish`    | `~/.config/fish/config.fish`                                  |
+| `shell/.zshrc`         | `~/.zshrc`                                                    |
 | `shell/starship.toml`  | `~/.config/starship.toml`                                     |
 | `zed/keymap.json`      | `~/.config/zed/keymap.json`                                   |
 | `zed/settings.json`    | `~/.config/zed/settings.json`                                 |

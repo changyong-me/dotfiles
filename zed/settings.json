@@ -18,9 +18,6 @@
   "ensure_final_newline_on_save": false,
 
   // Window & layout settings
-  "status_bar": {
-    "active_encoding_button": "enabled",
-  },
   "tab_bar": {
     "show_nav_history_buttons": false,
     "show_tab_bar_buttons": false,
@@ -55,7 +52,6 @@
 
   // Terminal settings
   "terminal": {
-    "button": false,
     "cursor_shape": "bar",
     "blinking": "on",
     "default_height": 600,

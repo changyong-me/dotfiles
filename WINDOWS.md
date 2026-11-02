@@ -16,7 +16,6 @@
 - Fast startup isn't turned on
 - File Explorer opens to This PC
 - File extensions are shown
-- The File Explorer navigation pane shows no Home or Gallery
 
 ## Symlinks
 

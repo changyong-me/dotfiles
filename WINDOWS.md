@@ -7,15 +7,15 @@
 
 ## Settings
 
-- The `sudo` command runs in the current terminal window
+- The `sudo` command runs applications inline
 - Caps Lock and Left Ctrl are swapped
 - The Start menu shows no Recent or All section
 - The taskbar shows no Search, Task view, or Widgets
 - The taskbar is on the left of the screen
 - Sticky keys has no keyboard shortcut
-- Shutting down skips Fast Startup
-- New File Explorer windows show This PC
-- All file extensions are shown
+- Fast startup isn't turned on
+- File Explorer opens to This PC
+- File extensions are shown
 - The File Explorer navigation pane shows no Home or Gallery
 
 ## Symlinks

@@ -18,7 +18,7 @@
 - The Dock is 48px and its size is locked
 - The Dock is on the left of the screen
 - The Dock shows no suggested or recent apps
-- Holding a key in ABC repeats it instead of showing accents
+- Holding a key doesn't show the accent menu
 - Pressing the Fn key does nothing on its own
 - Control-Option-Command-F13 selects the next input source
 - Caps Lock doesn't switch to and from ABC
@@ -27,9 +27,9 @@
 - Inline predictive text isn't shown
 - A double space doesn't add a period
 - Smart quotes and dashes aren't used
-- The desktop shows no external or removable drives
+- The desktop shows no external disks, CDs, DVDs, or iPods
 - New Finder windows show the startup disk
-- All file extensions are shown
+- All filename extensions are shown
 - The Finder keeps folders on top
 - The Finder searches the current folder
 - Finder windows use list view

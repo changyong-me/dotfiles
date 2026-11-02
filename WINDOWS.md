@@ -7,16 +7,16 @@
 
 ## Settings
 
-- All file extensions are shown
-- File Explorer opens to This PC
-- Explorer Home shows no recent, frequent, or cloud items
-- The desktop uses large icons
-- The taskbar is left-aligned with no Widgets, Task View, or search box
-- Start shows only Settings next to the power button
+- The `sudo` command runs in the current terminal window
 - Caps Lock and Left Ctrl are swapped
-- Pressing Shift five times doesn't turn on Sticky Keys
-- Fast Startup is off
-- sudo is enabled inline
+- The Start menu shows no Recent or All section
+- The taskbar shows no Search, Task view, or Widgets
+- The taskbar is on the left of the screen
+- Sticky keys has no keyboard shortcut
+- Shutting down skips Fast Startup
+- New File Explorer windows show This PC
+- All file extensions are shown
+- The File Explorer navigation pane shows no Home or Gallery
 
 ## Symlinks
 

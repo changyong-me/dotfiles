@@ -3,6 +3,7 @@
 ## Packages
 
 - WinGet: `AdGuard.AdGuard`, `Blizzard.BattleNet`, `Discord.Discord`, `Git.Git`, `GitHub.cli`, `Google.Chrome`, `Modrinth.ModrinthApp`, `Spotify.Spotify`, `Valve.Steam`, `ZedIndustries.Zed`
+- WinGet msstore: NVIDIA App (XP8CLZL93F5Z4P)
 
 ## Settings
 

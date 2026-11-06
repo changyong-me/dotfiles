@@ -3,7 +3,7 @@
 ## Packages
 
 - Homebrew formulae: `ffmpeg`, `gh`, `mas`, `pnpm`, `railway`, `rustup`, `starship`, `uv`, `yt-dlp`
-- Homebrew casks: `adguard`, `alt-tab`, `capsomnia`, `google-chrome`, `karabiner-elements`, `orbstack`, `spotify`, `thaw`, `zed`
+- Homebrew casks: `alt-tab`, `capsomnia`, `helium-browser`, `karabiner-elements`, `orbstack`, `spotify`, `thaw`, `zed`
 - Homebrew mas: Final Cut Pro (`424389933`), Logic Pro (`634148309`), Xcode (`497799835`)
 
 ## Programs

@@ -19,6 +19,7 @@
 - The Dock is on the left of the screen
 - The Dock shows no suggested or recent apps
 - Holding a key doesn't show the accent menu
+- Switching input sources doesn't show the indicator
 - Control-Option-Command-F13 selects the next input source
 - Caps Lock doesn't switch to and from ABC
 - Spelling isn't corrected automatically

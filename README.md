@@ -1,3 +1,3 @@
 # Dotfiles
 
-A declarative description of my macOS development machine and Windows gaming desktop. For agents: read [MACOS.md](MACOS.md) on macOS or [WINDOWS.md](WINDOWS.md) on Windows, look up how to apply each setting on the web, and make this computer match it.
+A declarative description of my [macOS development machine](MACOS.md) and [Windows gaming desktop](WINDOWS.md). The Claude app applies these docs, so they don't list it. The folders hold the config files that the docs symlink into place.

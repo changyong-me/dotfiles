@@ -3,7 +3,6 @@
 ## MACOS.md and WINDOWS.md
 
 - These docs describe the end state, not steps. Write each item as a present-tense fact.
-- Word each setting with its English UI label, adding nothing the label lacks.
 - Keep package lists and symlink rows in alphabetical order, with table columns aligned.
 - The Claude app is a prerequisite for applying these docs, so never list it as a package.
 

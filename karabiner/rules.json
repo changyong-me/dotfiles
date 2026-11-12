@@ -27,7 +27,7 @@
                 "left_control",
                 "left_shift"
               ],
-              "optional": ["caps_lock"]
+              "optional": ["any"]
             }
           },
           "to": {
@@ -45,7 +45,7 @@
                 "left_control",
                 "left_shift"
               ],
-              "optional": ["caps_lock"]
+              "optional": ["any"]
             }
           },
           "to": {
@@ -63,7 +63,7 @@
                 "left_control",
                 "left_shift"
               ],
-              "optional": ["caps_lock"]
+              "optional": ["any"]
             }
           },
           "to": {
@@ -81,7 +81,7 @@
                 "left_control",
                 "left_shift"
               ],
-              "optional": ["caps_lock"]
+              "optional": ["any"]
             }
           },
           "to": {
@@ -99,7 +99,7 @@
                 "left_control",
                 "left_shift"
               ],
-              "optional": ["caps_lock"]
+              "optional": ["any"]
             }
           },
           "to": {
@@ -118,7 +118,7 @@
                 "left_control",
                 "left_shift"
               ],
-              "optional": ["caps_lock"]
+              "optional": ["any"]
             }
           },
           "to": {
@@ -137,7 +137,7 @@
                 "left_control",
                 "left_shift"
               ],
-              "optional": ["caps_lock"]
+              "optional": ["any"]
             }
           },
           "to": {
@@ -156,7 +156,7 @@
                 "left_control",
                 "left_shift"
               ],
-              "optional": ["caps_lock"]
+              "optional": ["any"]
             }
           },
           "to": {
@@ -175,7 +175,7 @@
                 "left_control",
                 "left_shift"
               ],
-              "optional": ["caps_lock"]
+              "optional": ["any"]
             }
           },
           "to": {
@@ -193,7 +193,7 @@
                 "left_control",
                 "left_shift"
               ],
-              "optional": ["caps_lock"]
+              "optional": ["any"]
             }
           },
           "to": {
@@ -211,7 +211,7 @@
                 "left_control",
                 "left_shift"
               ],
-              "optional": ["caps_lock"]
+              "optional": ["any"]
             }
           },
           "to": {
@@ -229,7 +229,7 @@
                 "left_control",
                 "left_shift"
               ],
-              "optional": ["caps_lock"]
+              "optional": ["any"]
             }
           },
           "to": {
@@ -248,7 +248,7 @@
                 "left_control",
                 "left_shift"
               ],
-              "optional": ["caps_lock"]
+              "optional": ["any"]
             }
           },
           "to": {
@@ -267,7 +267,7 @@
                 "left_control",
                 "left_shift"
               ],
-              "optional": ["caps_lock"]
+              "optional": ["any"]
             }
           },
           "to": {
@@ -285,7 +285,7 @@
                 "left_control",
                 "left_shift"
               ],
-              "optional": ["caps_lock"]
+              "optional": ["any"]
             }
           },
           "to": {
@@ -304,7 +304,7 @@
                 "left_control",
                 "left_shift"
               ],
-              "optional": ["caps_lock"]
+              "optional": ["any"]
             }
           },
           "to": {
@@ -322,7 +322,7 @@
                 "left_control",
                 "left_shift"
               ],
-              "optional": ["caps_lock"]
+              "optional": ["any"]
             }
           },
           "to": {
@@ -341,7 +341,7 @@
                 "left_control",
                 "left_shift"
               ],
-              "optional": ["caps_lock"]
+              "optional": ["any"]
             }
           },
           "to": {
@@ -360,7 +360,7 @@
                 "left_control",
                 "left_shift"
               ],
-              "optional": ["caps_lock"]
+              "optional": ["any"]
             }
           },
           "to": {
@@ -379,7 +379,7 @@
                 "left_control",
                 "left_shift"
               ],
-              "optional": ["caps_lock"]
+              "optional": ["any"]
             }
           },
           "to": {
@@ -398,7 +398,7 @@
                 "left_control",
                 "left_shift"
               ],
-              "optional": ["caps_lock"]
+              "optional": ["any"]
             }
           },
           "to": {

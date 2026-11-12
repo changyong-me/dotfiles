@@ -1,11 +1,15 @@
 # CLAUDE.md
 
-- MACOS.md and WINDOWS.md describe the end state, not steps. Write each item as a present-tense fact.
-- Word each setting with its English UI label, adding nothing the label lacks.
+## MACOS.md and WINDOWS.md
+
+- These docs describe the end state, not steps. Write each item as a present-tense fact.
 - Keep package lists and symlink rows in alphabetical order, with table columns aligned.
 - The Claude app is a prerequisite for applying these docs, so never list it as a package.
-- Keep the right Command rule in `karabiner/rules.json` as Control-Option-Command-F13 followed by `vk_none`, bound to "Select next source in Input menu".
-  - "Select the previous input source" switches on key release and sometimes reverts.
-  - A shortcut with Space does nothing while Space is held.
-  - A function key alone fails when the hyper key is held with Control, Option, or Command.
-  - Without `vk_none`, the first character after switching is typed in the old input source.
+
+## Input source switching
+
+Keep the right Command rule in `karabiner/rules.json` sending Control-Option-Command-F13 followed by `vk_none`, with that shortcut bound to "Select the previous input source". Each part is there for a reason:
+
+- F13, because a shortcut with Space does nothing while Space is held.
+- Control-Option-Command, because a function key alone fails when the hyper key is held with one of those modifiers.
+- `vk_none`, because the switch happens on key release, and this releases the key as soon as it is pressed.

@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-## MACOS.md and WINDOWS.md
+## MACBOOK.md and DESKTOP.md
 
 - These docs describe the end state, not steps. Write each item as a present-tense fact.
 - Keep package lists and symlink rows in alphabetical order, with table columns aligned.

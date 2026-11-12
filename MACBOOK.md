@@ -1,42 +1,40 @@
-# macOS
+# MacBook
 
-## Packages
+## 패키지
 
 - Homebrew formulae: `ffmpeg`, `gh`, `mas`, `pnpm`, `railway`, `rustup`, `starship`, `uv`, `yt-dlp`
 - Homebrew casks: `alt-tab`, `helium-browser`, `karabiner-elements`, `orbstack`, `spotify`, `thaw`, `zed`
 - Homebrew mas: Final Cut Pro (`424389933`), Logic Pro (`634148309`), Xcode (`497799835`)
 
-## Programs
+## 환경 설정
 
-- The global `pnpm` Node.js runtime is LTS
-- The default `rustup` toolchain is stable
-- The `xcodebuild` command works from the terminal
-- The rule in `karabiner/rules.json` is enabled
+- `pnpm`의 전역 Node.js 런타임은 LTS다.
+- `rustup`의 기본 툴체인은 stable이다.
+- `xcodebuild` 명령은 터미널에서 동작한다.
+- `karabiner/rules.json`의 규칙은 켜져 있다.
 
-## Settings
+## 시스템 설정
 
-- The Dock is 48px and its size is locked
-- The Dock is on the left of the screen
-- The Dock shows no suggested or recent apps
-- Holding a key doesn't show the accent menu
-- Control-Option-Command-F13 selects the previous input source
-- Caps Lock doesn't switch to and from ABC
-- Spelling isn't corrected automatically
-- Words aren't capitalized automatically
-- Inline predictive text isn't shown
-- A double space doesn't add a period
-- Smart quotes and dashes aren't used
-- The desktop shows no external disks, CDs, DVDs, or iPods
-- New Finder windows show the startup disk
-- All filename extensions are shown
-- The Finder keeps folders on top
-- The Finder searches the current folder
-- Finder windows use list view
-- Finder windows show the path bar
+- Dock의 크기는 48px로 고정되어 있다.
+- Dock은 화면에서 왼쪽에 위치한다.
+- Dock에서 제안된 앱과 최근 앱을 보여 주지 않는다.
+- ⌃⌥⌘F13은 이전 입력 소스를 선택한다.
+- Caps Lock은 입력 소스를 전환하지 않는다.
+- 맞춤법을 자동으로 수정하지 않는다.
+- 자동으로 단어를 대문자로 시작하지 않는다.
+- 인라인 자동 완성 텍스트를 보여 주지 않는다.
+- 스페이스를 두 번 눌러도 마침표를 추가하지 않는다.
+- 스마트 인용 부호와 대시를 사용하지 않는다.
+- 모든 파일 확장자를 보여 준다.
+- 새로운 Finder 윈도우에서 시동 디스크를 보여 준다.
+- Finder와 데스크탑에서 폴더를 우선 정렬한다.
+- Finder에서 검색할 때 현재 폴더를 검색한다.
+- Finder는 목록 보기를 기본값으로 사용한다.
+- Finder에서 경로 막대를 보여 준다.
 
-## Symlinks
+## 심볼릭 링크
 
-| Repository             | Destination                                                   |
+| 원본                   | 링크                                                          |
 | ---------------------- | ------------------------------------------------------------- |
 | `claude/CLAUDE.md`     | `~/.claude/CLAUDE.md`                                         |
 | `claude/settings.json` | `~/.claude/settings.json`                                     |

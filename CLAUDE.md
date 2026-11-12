@@ -1,15 +1,14 @@
 # CLAUDE.md
 
-## MACBOOK.md and DESKTOP.md
+## 기기별 문서
 
-- These docs describe the end state, not steps. Write each item as a present-tense fact.
-- Keep package lists and symlink rows in alphabetical order, with table columns aligned.
-- The Claude app is a prerequisite for applying these docs, so never list it as a package.
+- 적용 절차를 기술하지 않고 적용 완료 상태를 선언한다.
+- Claude 앱은 사용자가 미리 설치하므로 패키지 목록에 추가하지 않는다.
 
-## Input source switching
+## 입력 소스 전환
 
-Keep the right Command rule in `karabiner/rules.json` sending Control-Option-Command-F13 followed by `vk_none`, with that shortcut bound to "Select the previous input source". Each part is there for a reason:
+오른쪽 ⌘를 누르면 ⌃⌥⌘F13과 `vk_none`을 보내 이전 입력 소스로 전환하는데, 각 부분에는 이유가 있다.
 
-- F13, because a shortcut with Space does nothing while Space is held.
-- Control-Option-Command, because a function key alone fails when the hyper key is held with one of those modifiers.
-- `vk_none`, because the switch happens on key release, and this releases the key as soon as it is pressed.
+- F13: 스페이스를 함께 눌러도 입력 소스가 전환되도록 한다.
+- ⌃⌥⌘: 이 중 하나와 하이퍼 키를 함께 눌러도 입력 소스가 전환되도록 한다.
+- `vk_none`: 누르는 즉시 입력 소스가 전환되도록 한다.

@@ -2,8 +2,8 @@
 
 ## 패키지
 
-- WinGet: `Blizzard.BattleNet`, `Discord.Discord`, `Git.Git`, `GitHub.cli`, `ImputNet.Helium`, `Modrinth.ModrinthApp`, `Spotify.Spotify`, `Valve.Steam`, `ZedIndustries.Zed`
-- WinGet msstore: NVIDIA App (`XP8CLZL93F5Z4P`), Xbox Accessories (`9NBLGGH30XJ3`)
+- winget (msstore): NVIDIA App (`XP8CLZL93F5Z4P`), Xbox Accessories (`9NBLGGH30XJ3`)
+- winget (winget): `Blizzard.BattleNet`, `Discord.Discord`, `Git.Git`, `GitHub.cli`, `ImputNet.Helium`, `Modrinth.ModrinthApp`, `Spotify.Spotify`, `Valve.Steam`, `ZedIndustries.Zed`
 
 ## 시스템 설정
 

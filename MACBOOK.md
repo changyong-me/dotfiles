@@ -2,16 +2,17 @@
 
 ## 패키지
 
-- Homebrew formulae: `ffmpeg`, `gh`, `mas`, `pnpm`, `railway`, `rustup`, `starship`, `uv`, `yt-dlp`
-- Homebrew casks: `alt-tab`, `helium-browser`, `karabiner-elements`, `orbstack`, `spotify`, `thaw`, `zed`
-- Homebrew mas: Final Cut Pro (`424389933`), Logic Pro (`634148309`), Xcode (`497799835`)
+- brew (casks): `alt-tab`, `helium-browser`, `karabiner-elements`, `orbstack`, `spotify`, `thaw`, `zed`
+- brew (formulae): `ffmpeg`, `gh`, `mas`, `pnpm`, `railway`, `rustup`, `starship`, `uv`, `yt-dlp`
+- mas: Final Cut Pro (`424389933`), Logic Pro (`634148309`), Xcode (`497799835`)
+- pnpm: `cf`
 
 ## 환경 설정
 
+- `karabiner/rules.json`의 규칙은 켜져 있다.
 - `pnpm`의 전역 Node.js 런타임은 LTS다.
 - `rustup`의 기본 툴체인은 stable이다.
 - `xcodebuild` 명령은 터미널에서 동작한다.
-- `karabiner/rules.json`의 규칙은 켜져 있다.
 
 ## 시스템 설정
 

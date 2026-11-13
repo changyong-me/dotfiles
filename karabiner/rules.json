@@ -295,6 +295,31 @@
         },
         {
           "type": "basic",
+          "conditions": [
+            {
+              "type": "input_source_if",
+              "input_sources": [{ "language": "^ko$" }]
+            }
+          ],
+          "from": {
+            "key_code": "quote",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "left_option",
+                "left_control",
+                "left_shift"
+              ],
+              "optional": ["any"]
+            }
+          },
+          "to": {
+            "key_code": "grave_accent_and_tilde",
+            "modifiers": ["left_option"]
+          }
+        },
+        {
+          "type": "basic",
           "from": {
             "key_code": "quote",
             "modifiers": {

@@ -35,15 +35,15 @@
 
 ## 심볼릭 링크
 
-| 원본                   | 링크                                                          |
-| ---------------------- | ------------------------------------------------------------- |
-| `claude/CLAUDE.md`     | `~/.claude/CLAUDE.md`                                         |
-| `claude/settings.json` | `~/.claude/settings.json`                                     |
-| `git/.gitconfig`       | `~/.gitconfig`                                                |
-| `git/ignore`           | `~/.config/git/ignore`                                        |
-| `karabiner/rules.json` | `~/.config/karabiner/assets/complex_modifications/rules.json` |
-| `shell/.zprofile`      | `~/.zprofile`                                                 |
-| `shell/.zshrc`         | `~/.zshrc`                                                    |
-| `shell/starship.toml`  | `~/.config/starship.toml`                                     |
-| `zed/keymap.json`      | `~/.config/zed/keymap.json`                                   |
-| `zed/settings.json`    | `~/.config/zed/settings.json`                                 |
+| 원본                     | 링크                                                          |
+| ------------------------ | ------------------------------------------------------------- |
+| `claude/CLAUDE.md`       | `~/.claude/CLAUDE.md`                                         |
+| `claude/settings.json`   | `~/.claude/settings.json`                                     |
+| `git/.gitconfig`         | `~/.gitconfig`                                                |
+| `git/ignore`             | `~/.config/git/ignore`                                        |
+| `karabiner/rules.json`   | `~/.config/karabiner/assets/complex_modifications/rules.json` |
+| `starship/starship.toml` | `~/.config/starship.toml`                                     |
+| `zed/keymap.json`        | `~/.config/zed/keymap.json`                                   |
+| `zed/settings.json`      | `~/.config/zed/settings.json`                                 |
+| `zsh/.zprofile`          | `~/.zprofile`                                                 |
+| `zsh/.zshrc`             | `~/.zshrc`                                                    |

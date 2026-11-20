@@ -1,6 +1,3 @@
 {
-  "autoMemoryEnabled": false,
-  "inputNeededNotifEnabled": true,
-  "agentPushNotifEnabled": true,
-  "skipWorkflowUsageWarning": true
+  "autoMemoryEnabled": false
 }

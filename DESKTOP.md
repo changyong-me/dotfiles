@@ -25,7 +25,7 @@
 
 | 원본                   | 링크                                  |
 | ---------------------- | ------------------------------------- |
-| `claude/CLAUDE.md`     | `%USERPROFILE%\.claude\CLAUDE.md`     |
+| `agy/skills`           | `%USERPROFILE%\.gemini\config\skills` |
 | `claude/settings.json` | `%USERPROFILE%\.claude\settings.json` |
 | `git/.gitconfig`       | `%USERPROFILE%\.gitconfig`            |
 | `git/ignore`           | `%USERPROFILE%\.config\git\ignore`    |

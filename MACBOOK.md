@@ -37,7 +37,7 @@
 
 | 원본                     | 링크                                                          |
 | ------------------------ | ------------------------------------------------------------- |
-| `claude/CLAUDE.md`       | `~/.claude/CLAUDE.md`                                         |
+| `agy/skills`             | `~/.gemini/config/skills`                                     |
 | `claude/settings.json`   | `~/.claude/settings.json`                                     |
 | `git/.gitconfig`         | `~/.gitconfig`                                                |
 | `git/ignore`             | `~/.config/git/ignore`                                        |
